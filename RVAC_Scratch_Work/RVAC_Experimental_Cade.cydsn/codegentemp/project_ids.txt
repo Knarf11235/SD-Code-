@@ -1,0 +1,6 @@
+C:\Users\K-Narf\Documents\PSoC Creator\RVAC_Scratch_Work\RVAC_Experimental_Cade.cydsn\RVAC_Experimental_Cade.cyprj|11af5811-43fe-4863-b737-cec342f34cb3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|02156a8e-7360-4c42-a9f3-76ff64077fe9
+C:\Users\K-Narf\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|c159f055-aa36-4414-8d72-81cded9fc547
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|52bf88e8-3496-4314-b149-e5863ca9adc7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|bc40af75-4b51-4e65-a396-b6741dd5b3dc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fc5dd42c-5196-4cbd-a8fc-644fdca47505

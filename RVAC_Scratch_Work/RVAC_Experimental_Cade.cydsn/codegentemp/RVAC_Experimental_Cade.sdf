@@ -1,0 +1,21 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2019-10-31T01:32:06Z")
+ (DESIGN "RVAC_Experimental_Cade")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "RVAC_Experimental_Cade")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT Red\(0\)_PAD Red\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Green\(0\)_PAD Green\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Blue\(0\)_PAD Blue\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
