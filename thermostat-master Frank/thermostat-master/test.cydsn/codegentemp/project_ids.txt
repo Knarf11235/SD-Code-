@@ -1,0 +1,6 @@
+C:\Users\K-Narf\Documents\Senior Design Code Testing\thermostat-master\thermostat-master\test.cydsn\test.cyprj|47ad11da-bc70-4878-bb93-0c1bd85c42ff
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|502b233d-e663-469c-a581-817e7b829e7d
+C:\Users\K-Narf\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|7333f55d-305e-4c07-a4c0-4137c0ed7112
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ba046d6c-a28d-4521-9b35-87b328e0cbca
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6f7c1a0d-2708-44d7-9513-f924cd6c24e3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8ffcd4f2-16e9-4a0e-9249-76f788ac27cb
