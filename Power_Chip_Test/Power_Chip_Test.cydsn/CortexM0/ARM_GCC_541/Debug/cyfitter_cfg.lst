@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
   29:Generated_Source\PSoC4/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   30:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED 
   31:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 2
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 2
 
 
   32:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
   35 0002 82B0     		sub	sp, sp, #8
   36              		.cfi_def_cfa_offset 16
   37 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 3
 
 
   38              		.cfi_def_cfa_register 7
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
   86:Generated_Source\PSoC4/cyfitter_cfg.c **** }
   84              		.loc 1 86 0
   85 0018 C046     		nop
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 4
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 4
 
 
   86 001a BD46     		mov	sp, r7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  133              		.thumb_func
  134              		.type	ClockSetup, %function
  135              	ClockSetup:
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 5
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 5
 
 
  136              	.LFB5:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  147:Generated_Source\PSoC4/cyfitter_cfg.c **** }
  148:Generated_Source\PSoC4/cyfitter_cfg.c **** #endif
  149:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 6
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 6
 
 
  150:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  181:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup and trim IMO based on desired frequency. */
  182:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CySysClkWriteImoFreq(48u);
  160              		.loc 1 182 0
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 7
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 7
 
 
  161 001c 3020     		movs	r0, #48
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  199:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CyDelayUs(1500u); /* Wait to stabilize */
  199              		.loc 1 199 0
  200 005e 1C4B     		ldr	r3, .L5+40
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 8
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 8
 
 
  201 0060 1800     		movs	r0, r3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  238 00a0 1A60     		str	r2, [r3]
  217:Generated_Source\PSoC4/cyfitter_cfg.c **** }
  239              		.loc 1 217 0
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 9
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 9
 
 
  240 00a2 C046     		nop
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  237:Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
  238:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void);
  239:Generated_Source\PSoC4/cyfitter_cfg.c **** static void AnalogSetDefault(void)
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 10
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 10
 
 
  240:Generated_Source\PSoC4/cyfitter_cfg.c **** {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  250:Generated_Source\PSoC4/cyfitter_cfg.c **** * Function Name: cyfitter_cfg
  251:Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
  252:Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 11
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 11
 
 
  253:Generated_Source\PSoC4/cyfitter_cfg.c **** *  This function is called by the start-up code for the selected device. It
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  283:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{(void CYFAR *)(CYDEV_UDB_DSI0_BASE), 1024u},
  284:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
  285:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 12
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 12
 
 
  286:Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint8 CYDATA i;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  289:Generated_Source\PSoC4/cyfitter_cfg.c **** 		{
  389              		.loc 1 289 0 is_stmt 0 discriminator 1
  390 014c FB1D     		adds	r3, r7, #7
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 13
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 13
 
 
  391 014e 1B78     		ldrb	r3, [r3]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  425 0184 214B     		ldr	r3, .L13+32
  426 0186 1B78     		ldrb	r3, [r3]
  427 0188 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 14
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 14
 
 
  428 018a 0621     		movs	r1, #6
@@ -827,10 +827,10 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  457 01b6 1A60     		str	r2, [r3]
  327:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  328:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
- 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT3_BASE), 0x000000F8u);
+ 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT3_BASE), 0x000000C0u);
  458              		.loc 1 329 0
  459 01b8 1C4B     		ldr	r3, .L13+64
- 460 01ba F822     		movs	r2, #248
+ 460 01ba C022     		movs	r2, #192
  461 01bc 1A60     		str	r2, [r3]
  330:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT3_PC), 0x00DB6C00u);
  462              		.loc 1 330 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  464 01c0 1C4A     		ldr	r2, .L13+72
  465 01c2 1A60     		str	r2, [r3]
  331:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 15
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 15
 
 
  332:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_4 Starting address: CYDEV_GPIO_PRT4_BASE */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  504 0210 00000440 		.word	1074003968
  505 0214 08000440 		.word	1074003976
  506 0218 00010440 		.word	1074004224
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 16
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 16
 
 
  507 021c 08010440 		.word	1074004232
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  561 003e 04       		.uleb128 0x4
  562 003f 08       		.byte	0x8
  563 0040 05       		.byte	0x5
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 17
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 17
 
 
  564 0041 83010000 		.4byte	.LASF1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  618 00a6 3A010000 		.4byte	.LASF15
  619 00aa 03       		.byte	0x3
  620 00ab E601     		.2byte	0x1e6
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 18
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 18
 
 
  621 00ad 6F000000 		.4byte	0x6f
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  675 011a 20000000 		.4byte	.LFE3-.LFB3
  676 011e 01       		.uleb128 0x1
  677 011f 9C       		.byte	0x9c
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 19
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 19
 
 
  678 0120 4D010000 		.4byte	0x14d
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  732 0184 70       		.sleb128 -16
  733 0185 09       		.uleb128 0x9
  734 0186 6E00     		.ascii	"n\000"
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 20
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 20
 
 
  735 0188 01       		.byte	0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  789 01f8 01       		.byte	0x1
  790 01f9 1601     		.2byte	0x116
  791 01fb CF010000 		.4byte	0x1cf
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 21
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 21
 
 
  792 01ff 13       		.uleb128 0x13
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  846 0007 03       		.uleb128 0x3
  847 0008 0E       		.uleb128 0xe
  848 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 22
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 22
 
 
  849 000a 0E       		.uleb128 0xe
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  903 0040 03       		.uleb128 0x3
  904 0041 0E       		.uleb128 0xe
  905 0042 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 23
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 23
 
 
  906 0043 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  960 007a 00       		.byte	0
  961 007b 03       		.uleb128 0x3
  962 007c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 24
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 24
 
 
  963 007d 3A       		.uleb128 0x3a
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1017 00b4 27       		.uleb128 0x27
  1018 00b5 19       		.uleb128 0x19
  1019 00b6 11       		.uleb128 0x11
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 25
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 25
 
 
  1020 00b7 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1074 00ef 12       		.uleb128 0x12
  1075 00f0 0D       		.uleb128 0xd
  1076 00f1 00       		.byte	0
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 26
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 26
 
 
  1077 00f2 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1131 0128 00       		.byte	0
  1132 0129 03       		.uleb128 0x3
  1133 012a 08       		.uleb128 0x8
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 27
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 27
 
 
  1134 012b 3A       		.uleb128 0x3a
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1185      FB0E0D00 
  1185      01010101 
  1186              	.LASF19:
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 28
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 28
 
 
  1187 0000 72656733 		.ascii	"reg32\000"
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1213      352E342E 
  1213      31203230 
  1213      31363036 
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 29
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 29
 
 
  1214 00b6 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 1
  1237      206C6F6E 
  1237      6720696E 
  1237      7400
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccrOubBS.s 			page 30
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccHK28Y1.s 			page 30
 
 
  1238              	.LASF32:

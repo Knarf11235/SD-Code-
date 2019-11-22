@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 1
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 1
 
 
    1              		.syntax unified
@@ -22,45 +22,34 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 1
   19              		.section	.rodata
   20              		.align	2
   21              	.LC2:
-  22 0000 434F4D50 		.ascii	"COMP Current is: %lu\012\000"
-  22      20437572 
-  22      72656E74 
+  22 0000 4761696E 		.ascii	"Gain is: %u\011\000"
   22      2069733A 
-  22      20256C75 
-  23 0016 0000     		.align	2
+  22      20257509 
+  22      00
+  23 000d 000000   		.align	2
   24              	.LC4:
-  25 0018 48494748 		.ascii	"HIGH FAN Current is: %lu\012\000"
-  25      2046414E 
+  25 0010 434F4D50 		.ascii	"COMP Current is: %u\012\000"
   25      20437572 
   25      72656E74 
   25      2069733A 
-  26 0032 0000     		.align	2
-  27              	.LC6:
-  28 0034 4C4F5720 		.ascii	"LOW FAN Current is: %lu\012\012\000"
-  28      46414E20 
-  28      43757272 
-  28      656E7420 
-  28      69733A20 
-  29 004e 0000     		.align	2
-  30              	.LC0:
-  31 0050 74       		.byte	116
-  32 0051 75       		.byte	117
-  33 0052 76       		.byte	118
-  34              		.section	.text.main,"ax",%progbits
-  35              		.align	2
-  36              		.global	main
-  37              		.code	16
-  38              		.thumb_func
-  39              		.type	main, %function
-  40              	main:
-  41              	.LFB36:
-  42              		.file 1 "main.c"
+  25      2025750A 
+  26 0025 000000   		.align	2
+  27              	.LC0:
+  28 0028 74       		.byte	116
+  29 0029 75       		.byte	117
+  30 002a 76       		.byte	118
+  31              		.section	.text.main,"ax",%progbits
+  32              		.align	2
+  33              		.global	main
+  34              		.code	16
+  35              		.thumb_func
+  36              		.type	main, %function
+  37              	main:
+  38              	.LFB36:
+  39              		.file 1 "main.c"
    1:main.c        **** /* ========================================
    2:main.c        ****  *
    3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 2
-
-
    4:main.c        ****  * All Rights Reserved
    5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
    6:main.c        ****  *
@@ -69,6 +58,9 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 1
    9:main.c        ****  *
   10:main.c        ****  * ========================================
   11:main.c        **** */
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 2
+
+
   12:main.c        **** #include <project.h>
   13:main.c        **** #include <stdio.h>
   14:main.c        **** #include <stdlib.h>
@@ -84,897 +76,2002 @@ ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 1
   24:main.c        **** #define POWER_CHIP_AUTO_GAIN_CAL    (0x5A)
   25:main.c        **** #define POWER_CHIP_AUTO_FREQ_CAL    (0x7A)
   26:main.c        **** #define POWER_CHIP_AUTO_REAC_GAIN   (0x41)
-  27:main.c        **** #define POWER_CHIP_GEN_HIGH_ADDRESS (0x0C)
+  27:main.c        **** #define POWER_CHIP_GEN_HIGH_ADDRESS (0x00)
   28:main.c        **** #define POWER_CHIP_LOW_VRMS_ADDRESS (0x06)
   29:main.c        **** #define POWER_CHIP_LOW_IRMS_ADDRESS (0x0E)
   30:main.c        **** #define POWER_CHIP_AUTO_REAC_GAIN   (0x41)
   31:main.c        **** #define POWER_CHIP_READ_REGISTER    (0x4E)
-  32:main.c        **** #define POWER_CHIP_CHECKSUM         (0x5E)
-  33:main.c        **** 
-  34:main.c        **** 
-  35:main.c        **** int main (void)
-  36:main.c        **** {
-  43              		.loc 1 36 0
-  44              		.cfi_startproc
-  45              		@ args = 0, pretend = 0, frame = 72
-  46              		@ frame_needed = 1, uses_anonymous_args = 0
-  47 0000 80B5     		push	{r7, lr}
-  48              		.cfi_def_cfa_offset 8
-  49              		.cfi_offset 7, -8
-  50              		.cfi_offset 14, -4
-  51 0002 92B0     		sub	sp, sp, #72
-  52              		.cfi_def_cfa_offset 80
-  53 0004 00AF     		add	r7, sp, #0
-  54              		.cfi_def_cfa_register 7
-  37:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  38:main.c        ****     char str[50];
-  39:main.c        ****     uint32_t result;
-  40:main.c        ****     uint8_t resbyte4;
-  41:main.c        ****     uint8_t resbyte3;
-  42:main.c        ****     uint8_t resbyte2;
-  43:main.c        ****     uint8_t resbyte1;
-  44:main.c        ****     int i;
-  45:main.c        ****     GREEN_Write(0);
-  55              		.loc 1 45 0
-  56 0006 0020     		movs	r0, #0
-  57 0008 FFF7FEFF 		bl	GREEN_Write
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 3
+  32:main.c        **** #define POWER_CHIP_WRITE_REGISTER   (0x4D)
+  33:main.c        **** #define POWER_CHIP_CHECKSUM         (0x5E)
+  34:main.c        **** #define POWER_CHIP_LOW_ID_ADDRESS   (0x04)
+  35:main.c        **** #define POWER_CHIP_LOW_IG_ADDRESS   (0x60)
+  36:main.c        **** #define POWER_CHIP_LOW_VG_ADDRESS   (0x62)
+  37:main.c        **** 
+  38:main.c        **** uint16_t VRMS_Read(uint8_t address);
+  39:main.c        **** uint16_t IRMS_Read(uint8_t address);
+  40:main.c        **** void VRMS_Gain_Write(uint8_t address, uint8_t Send_High_Byte, uint8_t Send_Low_Byte, uint8_t checks
+  41:main.c        **** void IRMS_Gain_Write(uint8_t address, uint8_t Send_High_Byte, uint8_t Send_Low_Byte, uint8_t checks
+  42:main.c        **** 
+  43:main.c        **** 
+  44:main.c        **** int main (void)
+  45:main.c        **** {
+  40              		.loc 1 45 0
+  41              		.cfi_startproc
+  42              		@ args = 0, pretend = 0, frame = 72
+  43              		@ frame_needed = 1, uses_anonymous_args = 0
+  44 0000 90B5     		push	{r4, r7, lr}
+  45              		.cfi_def_cfa_offset 12
+  46              		.cfi_offset 4, -12
+  47              		.cfi_offset 7, -8
+  48              		.cfi_offset 14, -4
+  49 0002 93B0     		sub	sp, sp, #76
+  50              		.cfi_def_cfa_offset 88
+  51 0004 00AF     		add	r7, sp, #0
+  52              		.cfi_def_cfa_register 7
+  46:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  47:main.c        ****     
+  48:main.c        ****     CyDelay(500);
+  53              		.loc 1 48 0
+  54 0006 FA23     		movs	r3, #250
+  55 0008 5B00     		lsls	r3, r3, #1
+  56 000a 1800     		movs	r0, r3
+  57 000c FFF7FEFF 		bl	CyDelay
+  49:main.c        ****     char str[50];
+  50:main.c        ****     int result;
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 3
 
 
-  46:main.c        ****     CyDelay(1000);
-  58              		.loc 1 46 0
-  59 000c FA23     		movs	r3, #250
-  60 000e 9B00     		lsls	r3, r3, #2
-  61 0010 1800     		movs	r0, r3
-  62 0012 FFF7FEFF 		bl	CyDelay
-  47:main.c        ****     GREEN_Write(1);
-  63              		.loc 1 47 0
-  64 0016 0120     		movs	r0, #1
-  65 0018 FFF7FEFF 		bl	GREEN_Write
-  48:main.c        ****     COMP_CB_Write(1);
-  66              		.loc 1 48 0
-  67 001c 0120     		movs	r0, #1
-  68 001e FFF7FEFF 		bl	COMP_CB_Write
-  49:main.c        ****     HF_CB_Write(1);
-  69              		.loc 1 49 0
-  70 0022 0120     		movs	r0, #1
-  71 0024 FFF7FEFF 		bl	HF_CB_Write
-  50:main.c        ****     LF_CB_Write(1);
-  72              		.loc 1 50 0
-  73 0028 0120     		movs	r0, #1
-  74 002a FFF7FEFF 		bl	LF_CB_Write
-  51:main.c        ****     COMP_Relay_Write(0);
-  75              		.loc 1 51 0
-  76 002e 0020     		movs	r0, #0
-  77 0030 FFF7FEFF 		bl	COMP_Relay_Write
-  52:main.c        ****     HF_Relay_Write(0);
-  78              		.loc 1 52 0
-  79 0034 0020     		movs	r0, #0
-  80 0036 FFF7FEFF 		bl	HF_Relay_Write
-  53:main.c        ****     LF_Relay_Write(0);
-  81              		.loc 1 53 0
-  82 003a 0020     		movs	r0, #0
-  83 003c FFF7FEFF 		bl	LF_Relay_Write
-  54:main.c        ****     
-  55:main.c        ****     BLUE_Write(0);
-  84              		.loc 1 55 0
-  85 0040 0020     		movs	r0, #0
-  86 0042 FFF7FEFF 		bl	BLUE_Write
-  56:main.c        ****     RED_Write(0);
-  87              		.loc 1 56 0
-  88 0046 0020     		movs	r0, #0
-  89 0048 FFF7FEFF 		bl	RED_Write
-  57:main.c        ****     CyDelay(1000);
-  90              		.loc 1 57 0
-  91 004c FA23     		movs	r3, #250
-  92 004e 9B00     		lsls	r3, r3, #2
-  93 0050 1800     		movs	r0, r3
-  94 0052 FFF7FEFF 		bl	CyDelay
-  58:main.c        ****     
-  59:main.c        ****     BLUE_Write(0);
-  95              		.loc 1 59 0
-  96 0056 0020     		movs	r0, #0
-  97 0058 FFF7FEFF 		bl	BLUE_Write
-  60:main.c        ****     RED_Write(0);
-  98              		.loc 1 60 0
-  99 005c 0020     		movs	r0, #0
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 4
+  51:main.c        ****     uint8_t ack, numBytes,Send_High_Byte, Send_Low_Byte;
+  52:main.c        ****     uint16_t checksum;
+  53:main.c        ****     uint16_t Gain = 0;
+  58              		.loc 1 53 0
+  59 0010 4623     		movs	r3, #70
+  60 0012 FB18     		adds	r3, r7, r3
+  61 0014 0022     		movs	r2, #0
+  62 0016 1A80     		strh	r2, [r3]
+  54:main.c        ****     uint16_t VGAIN_checksum = POWER_CHIP_HEADER_BYTE + 0x10 + POWER_CHIP_SET_ADD_PTR + POWER_CHIP_L
+  63              		.loc 1 54 0
+  64 0018 4223     		movs	r3, #66
+  65 001a FB18     		adds	r3, r7, r3
+  66 001c A822     		movs	r2, #168
+  67 001e FF32     		adds	r2, r2, #255
+  68 0020 1A80     		strh	r2, [r3]
+  55:main.c        ****     uint16_t IGAIN_checksum = POWER_CHIP_HEADER_BYTE + 0x10 + POWER_CHIP_SET_ADD_PTR + POWER_CHIP_L
+  69              		.loc 1 55 0
+  70 0022 4423     		movs	r3, #68
+  71 0024 FB18     		adds	r3, r7, r3
+  72 0026 A622     		movs	r2, #166
+  73 0028 FF32     		adds	r2, r2, #255
+  74 002a 1A80     		strh	r2, [r3]
+  56:main.c        ****     //uint32_t resbyte4;
+  57:main.c        ****     //uint32_t resbyte3;
+  58:main.c        ****     uint32_t resbyte2;
+  59:main.c        ****     uint32_t resbyte1;
+  60:main.c        ****     //int i;
+  61:main.c        ****     HF_Relay_Write(1);
+  75              		.loc 1 61 0
+  76 002c 0120     		movs	r0, #1
+  77 002e FFF7FEFF 		bl	HF_Relay_Write
+  62:main.c        ****     LF_Relay_Write(1);
+  78              		.loc 1 62 0
+  79 0032 0120     		movs	r0, #1
+  80 0034 FFF7FEFF 		bl	LF_Relay_Write
+  63:main.c        ****     COMP_Relay_Write(0);
+  81              		.loc 1 63 0
+  82 0038 0020     		movs	r0, #0
+  83 003a FFF7FEFF 		bl	COMP_Relay_Write
+  64:main.c        ****     GREEN_Write(0);
+  84              		.loc 1 64 0
+  85 003e 0020     		movs	r0, #0
+  86 0040 FFF7FEFF 		bl	GREEN_Write
+  65:main.c        ****     CyDelay(1000);
+  87              		.loc 1 65 0
+  88 0044 FA23     		movs	r3, #250
+  89 0046 9B00     		lsls	r3, r3, #2
+  90 0048 1800     		movs	r0, r3
+  91 004a FFF7FEFF 		bl	CyDelay
+  66:main.c        ****     GREEN_Write(1);
+  92              		.loc 1 66 0
+  93 004e 0120     		movs	r0, #1
+  94 0050 FFF7FEFF 		bl	GREEN_Write
+  67:main.c        ****     COMP_CB_Write(1);
+  95              		.loc 1 67 0
+  96 0054 0120     		movs	r0, #1
+  97 0056 FFF7FEFF 		bl	COMP_CB_Write
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 4
 
 
- 100 005e FFF7FEFF 		bl	RED_Write
-  61:main.c        ****     CyDelay(1000);
- 101              		.loc 1 61 0
- 102 0062 FA23     		movs	r3, #250
- 103 0064 9B00     		lsls	r3, r3, #2
- 104 0066 1800     		movs	r0, r3
- 105 0068 FFF7FEFF 		bl	CyDelay
-  62:main.c        ****     VR_EN_Write(1);
- 106              		.loc 1 62 0
- 107 006c 0120     		movs	r0, #1
- 108 006e FFF7FEFF 		bl	VR_EN_Write
-  63:main.c        ****     uint8_t powerAddresses[3] = {POWER_CHIP_COMP, POWER_CHIP_HIGH_FAN, POWER_CHIP_LOW_FAN};
- 109              		.loc 1 63 0
- 110 0072 3A1D     		adds	r2, r7, #4
- 111 0074 524B     		ldr	r3, .L11
- 112 0076 1000     		movs	r0, r2
- 113 0078 1900     		movs	r1, r3
- 114 007a 0323     		movs	r3, #3
- 115 007c 1A00     		movs	r2, r3
- 116 007e FFF7FEFF 		bl	memcpy
- 117              	.L10:
-  64:main.c        ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
-  65:main.c        ****     for(;;)
-  66:main.c        ****     {
-  67:main.c        ****         for(i=0;i<3;i++){
- 118              		.loc 1 67 0
- 119 0082 0023     		movs	r3, #0
- 120 0084 7B64     		str	r3, [r7, #68]
- 121 0086 96E0     		b	.L2
- 122              	.L9:
-  68:main.c        ****             /* Place your application code here. */
-  69:main.c        ****             I2C_1_I2CMasterSendStart(powerAddresses[i], I2C_1_I2C_READ_XFER_MODE, 100u);
- 123              		.loc 1 69 0
- 124 0088 3A1D     		adds	r2, r7, #4
- 125 008a 7B6C     		ldr	r3, [r7, #68]
- 126 008c D318     		adds	r3, r2, r3
- 127 008e 1B78     		ldrb	r3, [r3]
- 128 0090 6422     		movs	r2, #100
- 129 0092 0121     		movs	r1, #1
- 130 0094 1800     		movs	r0, r3
- 131 0096 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
-  70:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_HEADER_BYTE, 100u);
- 132              		.loc 1 70 0
- 133 009a 6421     		movs	r1, #100
- 134 009c A520     		movs	r0, #165
- 135 009e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  71:main.c        ****             I2C_1_I2CMasterWriteByte(0x08, 100u);
- 136              		.loc 1 71 0
- 137 00a2 6421     		movs	r1, #100
- 138 00a4 0820     		movs	r0, #8
- 139 00a6 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  72:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_SET_ADD_PTR, 100u);
- 140              		.loc 1 72 0
- 141 00aa 6421     		movs	r1, #100
- 142 00ac 4120     		movs	r0, #65
- 143 00ae FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  73:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_GEN_HIGH_ADDRESS, 100u);
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 5
+  68:main.c        ****     HF_CB_Write(1);
+  98              		.loc 1 68 0
+  99 005a 0120     		movs	r0, #1
+ 100 005c FFF7FEFF 		bl	HF_CB_Write
+  69:main.c        ****     LF_CB_Write(1);
+ 101              		.loc 1 69 0
+ 102 0060 0120     		movs	r0, #1
+ 103 0062 FFF7FEFF 		bl	LF_CB_Write
+  70:main.c        ****     HF_Relay_Write(1);
+ 104              		.loc 1 70 0
+ 105 0066 0120     		movs	r0, #1
+ 106 0068 FFF7FEFF 		bl	HF_Relay_Write
+  71:main.c        ****     LF_Relay_Write(0);
+ 107              		.loc 1 71 0
+ 108 006c 0020     		movs	r0, #0
+ 109 006e FFF7FEFF 		bl	LF_Relay_Write
+  72:main.c        ****     
+  73:main.c        ****     BLUE_Write(0);
+ 110              		.loc 1 73 0
+ 111 0072 0020     		movs	r0, #0
+ 112 0074 FFF7FEFF 		bl	BLUE_Write
+  74:main.c        ****     RED_Write(0);
+ 113              		.loc 1 74 0
+ 114 0078 0020     		movs	r0, #0
+ 115 007a FFF7FEFF 		bl	RED_Write
+  75:main.c        ****     CyDelay(1000);
+ 116              		.loc 1 75 0
+ 117 007e FA23     		movs	r3, #250
+ 118 0080 9B00     		lsls	r3, r3, #2
+ 119 0082 1800     		movs	r0, r3
+ 120 0084 FFF7FEFF 		bl	CyDelay
+  76:main.c        ****     
+  77:main.c        ****     BLUE_Write(0);
+ 121              		.loc 1 77 0
+ 122 0088 0020     		movs	r0, #0
+ 123 008a FFF7FEFF 		bl	BLUE_Write
+  78:main.c        ****     RED_Write(0);
+ 124              		.loc 1 78 0
+ 125 008e 0020     		movs	r0, #0
+ 126 0090 FFF7FEFF 		bl	RED_Write
+  79:main.c        ****     CyDelay(1000);
+ 127              		.loc 1 79 0
+ 128 0094 FA23     		movs	r3, #250
+ 129 0096 9B00     		lsls	r3, r3, #2
+ 130 0098 1800     		movs	r0, r3
+ 131 009a FFF7FEFF 		bl	CyDelay
+  80:main.c        ****     VR_EN_Write(1);
+ 132              		.loc 1 80 0
+ 133 009e 0120     		movs	r0, #1
+ 134 00a0 FFF7FEFF 		bl	VR_EN_Write
+  81:main.c        ****     uint8_t powerAddresses[3] = {POWER_CHIP_COMP, POWER_CHIP_HIGH_FAN, POWER_CHIP_LOW_FAN};
+ 135              		.loc 1 81 0
+ 136 00a4 3A1D     		adds	r2, r7, #4
+ 137 00a6 384B     		ldr	r3, .L5
+ 138 00a8 1000     		movs	r0, r2
+ 139 00aa 1900     		movs	r1, r3
+ 140 00ac 0323     		movs	r3, #3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 5
 
 
- 144              		.loc 1 73 0
- 145 00b2 6421     		movs	r1, #100
- 146 00b4 0C20     		movs	r0, #12
- 147 00b6 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  74:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_LOW_IRMS_ADDRESS, 100u);
- 148              		.loc 1 74 0
- 149 00ba 6421     		movs	r1, #100
- 150 00bc 0E20     		movs	r0, #14
- 151 00be FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  75:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_READ_REGISTER, 100u);
- 152              		.loc 1 75 0
- 153 00c2 6421     		movs	r1, #100
- 154 00c4 4E20     		movs	r0, #78
- 155 00c6 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  76:main.c        ****             I2C_1_I2CMasterWriteByte(0x04, 100u);
- 156              		.loc 1 76 0
- 157 00ca 6421     		movs	r1, #100
- 158 00cc 0420     		movs	r0, #4
- 159 00ce FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  77:main.c        ****             I2C_1_I2CMasterWriteByte(POWER_CHIP_CHECKSUM, 100u);
- 160              		.loc 1 77 0
- 161 00d2 6421     		movs	r1, #100
- 162 00d4 5E20     		movs	r0, #94
- 163 00d6 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
-  78:main.c        ****             I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA,(uint8 *) &resbyte4,100u);
- 164              		.loc 1 78 0
- 165 00da 0B23     		movs	r3, #11
- 166 00dc FB18     		adds	r3, r7, r3
- 167 00de 6422     		movs	r2, #100
- 168 00e0 1900     		movs	r1, r3
- 169 00e2 0120     		movs	r0, #1
- 170 00e4 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
-  79:main.c        ****             I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA,(uint8 *) &resbyte3,100u);
- 171              		.loc 1 79 0
- 172 00e8 0A23     		movs	r3, #10
- 173 00ea FB18     		adds	r3, r7, r3
- 174 00ec 6422     		movs	r2, #100
- 175 00ee 1900     		movs	r1, r3
- 176 00f0 0120     		movs	r0, #1
- 177 00f2 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
-  80:main.c        ****             I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA,(uint8 *) &resbyte2,100u);
- 178              		.loc 1 80 0
- 179 00f6 0923     		movs	r3, #9
- 180 00f8 FB18     		adds	r3, r7, r3
- 181 00fa 6422     		movs	r2, #100
- 182 00fc 1900     		movs	r1, r3
- 183 00fe 0120     		movs	r0, #1
- 184 0100 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
-  81:main.c        ****             I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA,(uint8 *) &resbyte1,100u);
- 185              		.loc 1 81 0
- 186 0104 0823     		movs	r3, #8
- 187 0106 FB18     		adds	r3, r7, r3
- 188 0108 6422     		movs	r2, #100
- 189 010a 1900     		movs	r1, r3
- 190 010c 0120     		movs	r0, #1
- 191 010e FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
-  82:main.c        ****             I2C_1_I2CMasterSendStop(100u);
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 6
+ 141 00ae 1A00     		movs	r2, r3
+ 142 00b0 FFF7FEFF 		bl	memcpy
+  82:main.c        ****     uint16_t VRMS;
+  83:main.c        ****     uint32_t IRMS;
+  84:main.c        ****     
+  85:main.c        ****     COMP_Relay_Write(1);
+ 143              		.loc 1 85 0
+ 144 00b4 0120     		movs	r0, #1
+ 145 00b6 FFF7FEFF 		bl	COMP_Relay_Write
+  86:main.c        ****     //Send_High_Byte = 0x00;
+  87:main.c        ****     //Send_Low_Byte = 0x04;
+  88:main.c        ****     //Comp Vrms gain is 4
+  89:main.c        ****     //COMP IRMS Gain is 6
+  90:main.c        ****     //High Fan VRMS Gain is 4
+  91:main.c        ****     //High Fan IRMS Gain is 6
+  92:main.c        ****     //Low Fan VRMS Gain is 4
+  93:main.c        ****     //Low Fan Vrms gain is 
+  94:main.c        ****      CyGlobalIntEnable;  /* Uncomment this line to enable global interrupts. */
+ 146              		.loc 1 94 0
+ 147              		.syntax divided
+ 148              	@ 94 "main.c" 1
+ 149 00ba 62B6     		CPSIE   i
+ 150              	@ 0 "" 2
+ 151              		.thumb
+ 152              		.syntax unified
+ 153              	.L4:
+  95:main.c        ****     for(;;)
+  96:main.c        ****     {
+  97:main.c        ****     //Check correct gain
+  98:main.c        ****     //VGAIN_checksum = (VGAIN_checksum + Send_High_Byte + Send_Low_Byte) % 0x100;
+  99:main.c        ****     
+ 100:main.c        ****     //VRMS_Gain_Write(powerAddresses[0], Send_Low_Byte, Send_High_Byte, VGAIN_checksum);
+ 101:main.c        ****     
+ 102:main.c        ****         Gain++;
+ 154              		.loc 1 102 0
+ 155 00bc 4623     		movs	r3, #70
+ 156 00be FB18     		adds	r3, r7, r3
+ 157 00c0 1A88     		ldrh	r2, [r3]
+ 158 00c2 4623     		movs	r3, #70
+ 159 00c4 FB18     		adds	r3, r7, r3
+ 160 00c6 0132     		adds	r2, r2, #1
+ 161 00c8 1A80     		strh	r2, [r3]
+ 103:main.c        ****         Send_High_Byte = (uint8_t) (Gain >> 8);
+ 162              		.loc 1 103 0
+ 163 00ca 4623     		movs	r3, #70
+ 164 00cc FB18     		adds	r3, r7, r3
+ 165 00ce 1B88     		ldrh	r3, [r3]
+ 166 00d0 1B0A     		lsrs	r3, r3, #8
+ 167 00d2 9AB2     		uxth	r2, r3
+ 168 00d4 4123     		movs	r3, #65
+ 169 00d6 FB18     		adds	r3, r7, r3
+ 170 00d8 1A70     		strb	r2, [r3]
+ 104:main.c        ****         Send_Low_Byte = (Gain & 0x00FF);
+ 171              		.loc 1 104 0
+ 172 00da 4023     		movs	r3, #64
+ 173 00dc FB18     		adds	r3, r7, r3
+ 174 00de 4622     		movs	r2, #70
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 6
 
 
- 192              		.loc 1 82 0
- 193 0112 6420     		movs	r0, #100
- 194 0114 FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
-  83:main.c        ****             result = (resbyte4 << 24) || (resbyte4 << 16) || (resbyte4 << 8) || resbyte1;
- 195              		.loc 1 83 0
- 196 0118 0B23     		movs	r3, #11
- 197 011a FB18     		adds	r3, r7, r3
- 198 011c 1B78     		ldrb	r3, [r3]
- 199 011e 1B06     		lsls	r3, r3, #24
- 200 0120 0ED1     		bne	.L3
- 201              		.loc 1 83 0 is_stmt 0 discriminator 2
- 202 0122 0B23     		movs	r3, #11
- 203 0124 FB18     		adds	r3, r7, r3
- 204 0126 1B78     		ldrb	r3, [r3]
- 205 0128 1B04     		lsls	r3, r3, #16
- 206 012a 09D1     		bne	.L3
- 207              		.loc 1 83 0 discriminator 4
- 208 012c 0B23     		movs	r3, #11
- 209 012e FB18     		adds	r3, r7, r3
- 210 0130 1B78     		ldrb	r3, [r3]
- 211 0132 1B02     		lsls	r3, r3, #8
- 212 0134 04D1     		bne	.L3
- 213              		.loc 1 83 0 discriminator 6
- 214 0136 0823     		movs	r3, #8
- 215 0138 FB18     		adds	r3, r7, r3
- 216 013a 1B78     		ldrb	r3, [r3]
- 217 013c 002B     		cmp	r3, #0
- 218 013e 01D0     		beq	.L4
- 219              	.L3:
- 220              		.loc 1 83 0 discriminator 7
- 221 0140 0123     		movs	r3, #1
- 222 0142 00E0     		b	.L5
- 223              	.L4:
- 224              		.loc 1 83 0 discriminator 8
- 225 0144 0023     		movs	r3, #0
- 226              	.L5:
- 227              		.loc 1 83 0 discriminator 10
- 228 0146 3B64     		str	r3, [r7, #64]
-  84:main.c        ****             if(i == 0){
- 229              		.loc 1 84 0 is_stmt 1 discriminator 10
- 230 0148 7B6C     		ldr	r3, [r7, #68]
- 231 014a 002B     		cmp	r3, #0
- 232 014c 0CD1     		bne	.L6
-  85:main.c        ****                 sprintf(str, "COMP Current is: %lu\n", result);
- 233              		.loc 1 85 0
- 234 014e 3A6C     		ldr	r2, [r7, #64]
- 235 0150 1C49     		ldr	r1, .L11+4
- 236 0152 0C23     		movs	r3, #12
- 237 0154 FB18     		adds	r3, r7, r3
- 238 0156 1800     		movs	r0, r3
- 239 0158 FFF7FEFF 		bl	sprintf
-  86:main.c        ****                 MyUART_1_PutString(str);
- 240              		.loc 1 86 0
- 241 015c 0C23     		movs	r3, #12
- 242 015e FB18     		adds	r3, r7, r3
- 243 0160 1800     		movs	r0, r3
- 244 0162 FFF7FEFF 		bl	MyUART_1_PutString
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 7
+ 175 00e0 BA18     		adds	r2, r7, r2
+ 176 00e2 1288     		ldrh	r2, [r2]
+ 177 00e4 1A70     		strb	r2, [r3]
+ 105:main.c        ****     
+ 106:main.c        ****         
+ 107:main.c        ****         
+ 108:main.c        ****         
+ 109:main.c        ****         
+ 110:main.c        ****         /*
+ 111:main.c        ****         VGAIN_checksum = (VGAIN_checksum + Send_High_Byte + Send_Low_Byte) % 0x100;
+ 112:main.c        ****         VRMS_Gain_Write(powerAddresses[1], Send_High_Byte, Send_Low_Byte, VGAIN_checksum);
+ 113:main.c        ****         
+ 114:main.c        ****         VRMS = VRMS_Read(powerAddresses[1]);
+ 115:main.c        ****         
+ 116:main.c        ****         sprintf(str, "Gain is: %u\t", Gain);
+ 117:main.c        ****         MyUART_1_PutString(str);
+ 118:main.c        ****         
+ 119:main.c        ****         sprintf(str, "COMP Voltage is: %u\n", VRMS);
+ 120:main.c        ****         MyUART_1_PutString(str);
+ 121:main.c        ****         */
+ 122:main.c        ****         
+ 123:main.c        ****         IGAIN_checksum = (IGAIN_checksum + Send_High_Byte + Send_Low_Byte) % 0x100;
+ 178              		.loc 1 123 0
+ 179 00e6 4423     		movs	r3, #68
+ 180 00e8 FB18     		adds	r3, r7, r3
+ 181 00ea 1A88     		ldrh	r2, [r3]
+ 182 00ec 4123     		movs	r3, #65
+ 183 00ee FB18     		adds	r3, r7, r3
+ 184 00f0 1B78     		ldrb	r3, [r3]
+ 185 00f2 D218     		adds	r2, r2, r3
+ 186 00f4 4023     		movs	r3, #64
+ 187 00f6 FB18     		adds	r3, r7, r3
+ 188 00f8 1B78     		ldrb	r3, [r3]
+ 189 00fa D318     		adds	r3, r2, r3
+ 190 00fc 234A     		ldr	r2, .L5+4
+ 191 00fe 1340     		ands	r3, r2
+ 192 0100 03D5     		bpl	.L2
+ 193 0102 013B     		subs	r3, r3, #1
+ 194 0104 224A     		ldr	r2, .L5+8
+ 195 0106 1343     		orrs	r3, r2
+ 196 0108 0133     		adds	r3, r3, #1
+ 197              	.L2:
+ 198 010a 1A00     		movs	r2, r3
+ 199 010c 4423     		movs	r3, #68
+ 200 010e FB18     		adds	r3, r7, r3
+ 201 0110 1A80     		strh	r2, [r3]
+ 124:main.c        ****         IRMS_Gain_Write(powerAddresses[2], Send_High_Byte, Send_Low_Byte, IGAIN_checksum);
+ 202              		.loc 1 124 0
+ 203 0112 3B1D     		adds	r3, r7, #4
+ 204 0114 9878     		ldrb	r0, [r3, #2]
+ 205 0116 4423     		movs	r3, #68
+ 206 0118 FB18     		adds	r3, r7, r3
+ 207 011a 1B88     		ldrh	r3, [r3]
+ 208 011c DCB2     		uxtb	r4, r3
+ 209 011e 4023     		movs	r3, #64
+ 210 0120 FB18     		adds	r3, r7, r3
+ 211 0122 1A78     		ldrb	r2, [r3]
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 7
 
 
- 245 0166 1EE0     		b	.L7
- 246              	.L6:
-  87:main.c        ****             }
-  88:main.c        ****             else if(i == 1){
- 247              		.loc 1 88 0
- 248 0168 7B6C     		ldr	r3, [r7, #68]
- 249 016a 012B     		cmp	r3, #1
- 250 016c 0CD1     		bne	.L8
-  89:main.c        ****                 sprintf(str, "HIGH FAN Current is: %lu\n", result);
- 251              		.loc 1 89 0
- 252 016e 3A6C     		ldr	r2, [r7, #64]
- 253 0170 1549     		ldr	r1, .L11+8
- 254 0172 0C23     		movs	r3, #12
- 255 0174 FB18     		adds	r3, r7, r3
- 256 0176 1800     		movs	r0, r3
- 257 0178 FFF7FEFF 		bl	sprintf
-  90:main.c        ****                 MyUART_1_PutString(str);
- 258              		.loc 1 90 0
- 259 017c 0C23     		movs	r3, #12
- 260 017e FB18     		adds	r3, r7, r3
- 261 0180 1800     		movs	r0, r3
- 262 0182 FFF7FEFF 		bl	MyUART_1_PutString
- 263 0186 0EE0     		b	.L7
- 264              	.L8:
-  91:main.c        ****             }
-  92:main.c        ****             else if(i == 2){
- 265              		.loc 1 92 0
- 266 0188 7B6C     		ldr	r3, [r7, #68]
- 267 018a 022B     		cmp	r3, #2
- 268 018c 0BD1     		bne	.L7
-  93:main.c        ****                 sprintf(str, "LOW FAN Current is: %lu\n\n", result);
- 269              		.loc 1 93 0
- 270 018e 3A6C     		ldr	r2, [r7, #64]
- 271 0190 0E49     		ldr	r1, .L11+12
- 272 0192 0C23     		movs	r3, #12
- 273 0194 FB18     		adds	r3, r7, r3
- 274 0196 1800     		movs	r0, r3
- 275 0198 FFF7FEFF 		bl	sprintf
-  94:main.c        ****                 MyUART_1_PutString(str);
- 276              		.loc 1 94 0
- 277 019c 0C23     		movs	r3, #12
- 278 019e FB18     		adds	r3, r7, r3
- 279 01a0 1800     		movs	r0, r3
- 280 01a2 FFF7FEFF 		bl	MyUART_1_PutString
- 281              	.L7:
-  95:main.c        ****             }
-  96:main.c        ****             CyDelay(1000);
- 282              		.loc 1 96 0 discriminator 2
- 283 01a6 FA23     		movs	r3, #250
- 284 01a8 9B00     		lsls	r3, r3, #2
- 285 01aa 1800     		movs	r0, r3
- 286 01ac FFF7FEFF 		bl	CyDelay
-  67:main.c        ****             /* Place your application code here. */
- 287              		.loc 1 67 0 discriminator 2
- 288 01b0 7B6C     		ldr	r3, [r7, #68]
- 289 01b2 0133     		adds	r3, r3, #1
- 290 01b4 7B64     		str	r3, [r7, #68]
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 8
+ 212 0124 4123     		movs	r3, #65
+ 213 0126 FB18     		adds	r3, r7, r3
+ 214 0128 1978     		ldrb	r1, [r3]
+ 215 012a 2300     		movs	r3, r4
+ 216 012c FFF7FEFF 		bl	IRMS_Gain_Write
+ 125:main.c        ****         
+ 126:main.c        ****         IRMS = IRMS_Read(powerAddresses[2]);
+ 217              		.loc 1 126 0
+ 218 0130 3B1D     		adds	r3, r7, #4
+ 219 0132 9B78     		ldrb	r3, [r3, #2]
+ 220 0134 1800     		movs	r0, r3
+ 221 0136 FFF7FEFF 		bl	IRMS_Read
+ 222 013a 0300     		movs	r3, r0
+ 223 013c FB63     		str	r3, [r7, #60]
+ 127:main.c        ****         
+ 128:main.c        ****         sprintf(str, "Gain is: %u\t", Gain);
+ 224              		.loc 1 128 0
+ 225 013e 4623     		movs	r3, #70
+ 226 0140 FB18     		adds	r3, r7, r3
+ 227 0142 1A88     		ldrh	r2, [r3]
+ 228 0144 1349     		ldr	r1, .L5+12
+ 229 0146 0823     		movs	r3, #8
+ 230 0148 FB18     		adds	r3, r7, r3
+ 231 014a 1800     		movs	r0, r3
+ 232 014c FFF7FEFF 		bl	sprintf
+ 129:main.c        ****         MyUART_1_PutString(str);
+ 233              		.loc 1 129 0
+ 234 0150 0823     		movs	r3, #8
+ 235 0152 FB18     		adds	r3, r7, r3
+ 236 0154 1800     		movs	r0, r3
+ 237 0156 FFF7FEFF 		bl	MyUART_1_PutString
+ 130:main.c        ****         
+ 131:main.c        ****         sprintf(str, "COMP Current is: %u\n", IRMS);
+ 238              		.loc 1 131 0
+ 239 015a FA6B     		ldr	r2, [r7, #60]
+ 240 015c 0E49     		ldr	r1, .L5+16
+ 241 015e 0823     		movs	r3, #8
+ 242 0160 FB18     		adds	r3, r7, r3
+ 243 0162 1800     		movs	r0, r3
+ 244 0164 FFF7FEFF 		bl	sprintf
+ 132:main.c        ****         MyUART_1_PutString(str);   
+ 245              		.loc 1 132 0
+ 246 0168 0823     		movs	r3, #8
+ 247 016a FB18     		adds	r3, r7, r3
+ 248 016c 1800     		movs	r0, r3
+ 249 016e FFF7FEFF 		bl	MyUART_1_PutString
+ 133:main.c        ****         
+ 134:main.c        ****         
+ 135:main.c        ****             
+ 136:main.c        ****             
+ 137:main.c        ****             
+ 138:main.c        ****             
+ 139:main.c        ****             //HF_Relay_Write(0);
+ 140:main.c        ****             //LF_Relay_Write(0);
+ 141:main.c        ****             //COMP_Relay_Write(0);
+ 142:main.c        ****             /*
+ 143:main.c        ****             
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 8
 
 
- 291              	.L2:
-  67:main.c        ****             /* Place your application code here. */
- 292              		.loc 1 67 0 is_stmt 0 discriminator 1
- 293 01b6 7B6C     		ldr	r3, [r7, #68]
- 294 01b8 022B     		cmp	r3, #2
- 295 01ba 00DC     		bgt	.LCB216
- 296 01bc 64E7     		b	.L9	@long jump
- 297              	.LCB216:
-  97:main.c        ****         }
-  98:main.c        ****     }
- 298              		.loc 1 98 0 is_stmt 1
- 299 01be 60E7     		b	.L10
- 300              	.L12:
- 301              		.align	2
- 302              	.L11:
- 303 01c0 50000000 		.word	.LC0
- 304 01c4 00000000 		.word	.LC2
- 305 01c8 18000000 		.word	.LC4
- 306 01cc 34000000 		.word	.LC6
- 307              		.cfi_endproc
- 308              	.LFE36:
- 309              		.size	main, .-main
- 310              		.text
- 311              	.Letext0:
- 312              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 313              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 314              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
- 315              		.section	.debug_info,"",%progbits
- 316              	.Ldebug_info0:
- 317 0000 6D010000 		.4byte	0x16d
- 318 0004 0400     		.2byte	0x4
- 319 0006 00000000 		.4byte	.Ldebug_abbrev0
- 320 000a 04       		.byte	0x4
- 321 000b 01       		.uleb128 0x1
- 322 000c 52000000 		.4byte	.LASF25
- 323 0010 0C       		.byte	0xc
- 324 0011 9C010000 		.4byte	.LASF26
- 325 0015 F2000000 		.4byte	.LASF27
- 326 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 327 001d 00000000 		.4byte	0
- 328 0021 00000000 		.4byte	.Ldebug_line0
- 329 0025 02       		.uleb128 0x2
- 330 0026 01       		.byte	0x1
- 331 0027 06       		.byte	0x6
- 332 0028 FA010000 		.4byte	.LASF0
- 333 002c 03       		.uleb128 0x3
- 334 002d 00000000 		.4byte	.LASF5
- 335 0031 02       		.byte	0x2
- 336 0032 1D       		.byte	0x1d
- 337 0033 37000000 		.4byte	0x37
- 338 0037 02       		.uleb128 0x2
- 339 0038 01       		.byte	0x1
- 340 0039 08       		.byte	0x8
- 341 003a 10000000 		.4byte	.LASF1
- 342 003e 02       		.uleb128 0x2
- 343 003f 02       		.byte	0x2
- 344 0040 05       		.byte	0x5
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 9
+ 144:main.c        ****             
+ 145:main.c        ****             
+ 146:main.c        ****             if(i == 0){
+ 147:main.c        ****                 sprintf(str, "COMP ID is: %u\n", result);
+ 148:main.c        ****                 MyUART_1_PutString(str);
+ 149:main.c        ****             }
+ 150:main.c        ****             else if(i == 1){
+ 151:main.c        ****                 sprintf(str, "HIGH FAN ID is: %u\n", result);
+ 152:main.c        ****                 MyUART_1_PutString(str);
+ 153:main.c        ****             }
+ 154:main.c        ****             else if(i == 2){
+ 155:main.c        ****                 sprintf(str, "LOW FAN ID is: %u\n\n", result);
+ 156:main.c        ****                 MyUART_1_PutString(str);
+ 157:main.c        ****             }*/
+ 158:main.c        ****         //}
+ 159:main.c        ****         if(Gain == 0x00FF)
+ 250              		.loc 1 159 0
+ 251 0172 4623     		movs	r3, #70
+ 252 0174 FB18     		adds	r3, r7, r3
+ 253 0176 1B88     		ldrh	r3, [r3]
+ 254 0178 FF2B     		cmp	r3, #255
+ 255 017a 9FD1     		bne	.L4
+ 160:main.c        ****             CyDelay(30000);
+ 256              		.loc 1 160 0
+ 257 017c 074B     		ldr	r3, .L5+20
+ 258 017e 1800     		movs	r0, r3
+ 259 0180 FFF7FEFF 		bl	CyDelay
+ 161:main.c        ****     }
+ 260              		.loc 1 161 0
+ 261 0184 9AE7     		b	.L4
+ 262              	.L6:
+ 263 0186 C046     		.align	2
+ 264              	.L5:
+ 265 0188 28000000 		.word	.LC0
+ 266 018c FF000080 		.word	-2147483393
+ 267 0190 00FFFFFF 		.word	-256
+ 268 0194 00000000 		.word	.LC2
+ 269 0198 10000000 		.word	.LC4
+ 270 019c 30750000 		.word	30000
+ 271              		.cfi_endproc
+ 272              	.LFE36:
+ 273              		.size	main, .-main
+ 274              		.section	.text.VRMS_Read,"ax",%progbits
+ 275              		.align	2
+ 276              		.global	VRMS_Read
+ 277              		.code	16
+ 278              		.thumb_func
+ 279              		.type	VRMS_Read, %function
+ 280              	VRMS_Read:
+ 281              	.LFB37:
+ 162:main.c        **** }
+ 163:main.c        **** 
+ 164:main.c        **** /* [] END OF FILE */
+ 165:main.c        **** 
+ 166:main.c        **** 
+ 167:main.c        **** uint16_t VRMS_Read(uint8_t address){
+ 282              		.loc 1 167 0
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 9
 
 
- 345 0041 CC010000 		.4byte	.LASF2
- 346 0045 02       		.uleb128 0x2
- 347 0046 02       		.byte	0x2
- 348 0047 07       		.byte	0x7
- 349 0048 3F000000 		.4byte	.LASF3
- 350 004c 02       		.uleb128 0x2
- 351 004d 04       		.byte	0x4
- 352 004e 05       		.byte	0x5
- 353 004f E5010000 		.4byte	.LASF4
- 354 0053 03       		.uleb128 0x3
- 355 0054 E7000000 		.4byte	.LASF6
- 356 0058 02       		.byte	0x2
- 357 0059 41       		.byte	0x41
- 358 005a 5E000000 		.4byte	0x5e
- 359 005e 02       		.uleb128 0x2
- 360 005f 04       		.byte	0x4
- 361 0060 07       		.byte	0x7
- 362 0061 2D000000 		.4byte	.LASF7
- 363 0065 02       		.uleb128 0x2
- 364 0066 08       		.byte	0x8
- 365 0067 05       		.byte	0x5
- 366 0068 8E010000 		.4byte	.LASF8
- 367 006c 02       		.uleb128 0x2
- 368 006d 08       		.byte	0x8
- 369 006e 07       		.byte	0x7
- 370 006f 5F010000 		.4byte	.LASF9
- 371 0073 04       		.uleb128 0x4
- 372 0074 04       		.byte	0x4
- 373 0075 05       		.byte	0x5
- 374 0076 696E7400 		.ascii	"int\000"
- 375 007a 02       		.uleb128 0x2
- 376 007b 04       		.byte	0x4
- 377 007c 07       		.byte	0x7
- 378 007d 52010000 		.4byte	.LASF10
- 379 0081 03       		.uleb128 0x3
- 380 0082 76010000 		.4byte	.LASF11
- 381 0086 03       		.byte	0x3
- 382 0087 18       		.byte	0x18
- 383 0088 2C000000 		.4byte	0x2c
- 384 008c 03       		.uleb128 0x3
- 385 008d DC010000 		.4byte	.LASF12
- 386 0091 03       		.byte	0x3
- 387 0092 30       		.byte	0x30
- 388 0093 53000000 		.4byte	0x53
- 389 0097 05       		.uleb128 0x5
- 390 0098 D6010000 		.4byte	.LASF13
- 391 009c 04       		.byte	0x4
- 392 009d E401     		.2byte	0x1e4
- 393 009f 37000000 		.4byte	0x37
- 394 00a3 02       		.uleb128 0x2
- 395 00a4 04       		.byte	0x4
- 396 00a5 04       		.byte	0x4
- 397 00a6 0A000000 		.4byte	.LASF14
- 398 00aa 02       		.uleb128 0x2
- 399 00ab 08       		.byte	0x8
- 400 00ac 04       		.byte	0x4
- 401 00ad E0000000 		.4byte	.LASF15
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 10
+ 283              		.cfi_startproc
+ 284              		@ args = 0, pretend = 0, frame = 24
+ 285              		@ frame_needed = 1, uses_anonymous_args = 0
+ 286 0000 80B5     		push	{r7, lr}
+ 287              		.cfi_def_cfa_offset 8
+ 288              		.cfi_offset 7, -8
+ 289              		.cfi_offset 14, -4
+ 290 0002 86B0     		sub	sp, sp, #24
+ 291              		.cfi_def_cfa_offset 32
+ 292 0004 00AF     		add	r7, sp, #0
+ 293              		.cfi_def_cfa_register 7
+ 294 0006 0200     		movs	r2, r0
+ 295 0008 FB1D     		adds	r3, r7, #7
+ 296 000a 1A70     		strb	r2, [r3]
+ 168:main.c        ****     uint16_t ack, checksum, numBytes, resbyte2, resbyte1;
+ 169:main.c        ****     uint16_t VRMS;
+ 170:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_WRITE_XFER_MODE, 100u);
+ 297              		.loc 1 170 0
+ 298 000c FB1D     		adds	r3, r7, #7
+ 299 000e 1B78     		ldrb	r3, [r3]
+ 300 0010 6422     		movs	r2, #100
+ 301 0012 0021     		movs	r1, #0
+ 302 0014 1800     		movs	r0, r3
+ 303 0016 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 171:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_HEADER_BYTE, 100u);
+ 304              		.loc 1 171 0
+ 305 001a 6421     		movs	r1, #100
+ 306 001c A520     		movs	r0, #165
+ 307 001e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 172:main.c        ****     I2C_1_I2CMasterWriteByte(0x08, 100u);//# in frame
+ 308              		.loc 1 172 0
+ 309 0022 6421     		movs	r1, #100
+ 310 0024 0820     		movs	r0, #8
+ 311 0026 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 173:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_SET_ADD_PTR, 100u);
+ 312              		.loc 1 173 0
+ 313 002a 6421     		movs	r1, #100
+ 314 002c 4120     		movs	r0, #65
+ 315 002e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 174:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_GEN_HIGH_ADDRESS, 100u);
+ 316              		.loc 1 174 0
+ 317 0032 6421     		movs	r1, #100
+ 318 0034 0020     		movs	r0, #0
+ 319 0036 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 175:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_LOW_VRMS_ADDRESS, 100u);
+ 320              		.loc 1 175 0
+ 321 003a 6421     		movs	r1, #100
+ 322 003c 0620     		movs	r0, #6
+ 323 003e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 176:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_READ_REGISTER, 100u);
+ 324              		.loc 1 176 0
+ 325 0042 6421     		movs	r1, #100
+ 326 0044 4E20     		movs	r0, #78
+ 327 0046 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 177:main.c        ****     I2C_1_I2CMasterWriteByte(0x02, 100u);//# to read
+ 328              		.loc 1 177 0
+ 329 004a 6421     		movs	r1, #100
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 10
 
 
- 402 00b1 02       		.uleb128 0x2
- 403 00b2 01       		.byte	0x1
- 404 00b3 08       		.byte	0x8
- 405 00b4 A3010000 		.4byte	.LASF16
- 406 00b8 02       		.uleb128 0x2
- 407 00b9 08       		.byte	0x8
- 408 00ba 04       		.byte	0x4
- 409 00bb EE010000 		.4byte	.LASF17
- 410 00bf 02       		.uleb128 0x2
- 411 00c0 04       		.byte	0x4
- 412 00c1 07       		.byte	0x7
- 413 00c2 85010000 		.4byte	.LASF18
- 414 00c6 06       		.uleb128 0x6
- 415 00c7 4D010000 		.4byte	.LASF28
- 416 00cb 01       		.byte	0x1
- 417 00cc 23       		.byte	0x23
- 418 00cd 73000000 		.4byte	0x73
- 419 00d1 00000000 		.4byte	.LFB36
- 420 00d5 D0010000 		.4byte	.LFE36-.LFB36
- 421 00d9 01       		.uleb128 0x1
- 422 00da 9C       		.byte	0x9c
- 423 00db 54010000 		.4byte	0x154
- 424 00df 07       		.uleb128 0x7
- 425 00e0 73747200 		.ascii	"str\000"
- 426 00e4 01       		.byte	0x1
- 427 00e5 26       		.byte	0x26
- 428 00e6 54010000 		.4byte	0x154
- 429 00ea 03       		.uleb128 0x3
- 430 00eb 91       		.byte	0x91
- 431 00ec BC7F     		.sleb128 -68
- 432 00ee 08       		.uleb128 0x8
- 433 00ef 7E010000 		.4byte	.LASF19
- 434 00f3 01       		.byte	0x1
- 435 00f4 27       		.byte	0x27
- 436 00f5 8C000000 		.4byte	0x8c
- 437 00f9 02       		.uleb128 0x2
- 438 00fa 91       		.byte	0x91
- 439 00fb 70       		.sleb128 -16
- 440 00fc 08       		.uleb128 0x8
- 441 00fd C3010000 		.4byte	.LASF20
- 442 0101 01       		.byte	0x1
- 443 0102 28       		.byte	0x28
- 444 0103 81000000 		.4byte	0x81
- 445 0107 03       		.uleb128 0x3
- 446 0108 91       		.byte	0x91
- 447 0109 BB7F     		.sleb128 -69
- 448 010b 08       		.uleb128 0x8
- 449 010c BA010000 		.4byte	.LASF21
- 450 0110 01       		.byte	0x1
- 451 0111 29       		.byte	0x29
- 452 0112 81000000 		.4byte	0x81
- 453 0116 03       		.uleb128 0x3
- 454 0117 91       		.byte	0x91
- 455 0118 BA7F     		.sleb128 -70
- 456 011a 08       		.uleb128 0x8
- 457 011b B1010000 		.4byte	.LASF22
- 458 011f 01       		.byte	0x1
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 11
+ 330 004c 0220     		movs	r0, #2
+ 331 004e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 178:main.c        ****     I2C_1_I2CMasterWriteByte(0x44, 100u);
+ 332              		.loc 1 178 0
+ 333 0052 6421     		movs	r1, #100
+ 334 0054 4420     		movs	r0, #68
+ 335 0056 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 179:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 336              		.loc 1 179 0
+ 337 005a 6420     		movs	r0, #100
+ 338 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 180:main.c        ****     
+ 181:main.c        ****     I2C_1_Sleep();
+ 339              		.loc 1 181 0
+ 340 0060 FFF7FEFF 		bl	I2C_1_Sleep
+ 182:main.c        ****     I2C_1_Wakeup();
+ 341              		.loc 1 182 0
+ 342 0064 FFF7FEFF 		bl	I2C_1_Wakeup
+ 183:main.c        ****     
+ 184:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_READ_XFER_MODE, 100u);
+ 343              		.loc 1 184 0
+ 344 0068 FB1D     		adds	r3, r7, #7
+ 345 006a 1B78     		ldrb	r3, [r3]
+ 346 006c 6422     		movs	r2, #100
+ 347 006e 0121     		movs	r1, #1
+ 348 0070 1800     		movs	r0, r3
+ 349 0072 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 185:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &ack,100u);
+ 350              		.loc 1 185 0
+ 351 0076 1423     		movs	r3, #20
+ 352 0078 FB18     		adds	r3, r7, r3
+ 353 007a 6422     		movs	r2, #100
+ 354 007c 1900     		movs	r1, r3
+ 355 007e 0020     		movs	r0, #0
+ 356 0080 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 186:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &numBytes,100u);
+ 357              		.loc 1 186 0
+ 358 0084 1023     		movs	r3, #16
+ 359 0086 FB18     		adds	r3, r7, r3
+ 360 0088 6422     		movs	r2, #100
+ 361 008a 1900     		movs	r1, r3
+ 362 008c 0020     		movs	r0, #0
+ 363 008e FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 187:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte2,100u);
+ 364              		.loc 1 187 0
+ 365 0092 0E23     		movs	r3, #14
+ 366 0094 FB18     		adds	r3, r7, r3
+ 367 0096 6422     		movs	r2, #100
+ 368 0098 1900     		movs	r1, r3
+ 369 009a 0020     		movs	r0, #0
+ 370 009c FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 188:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte1,100u);
+ 371              		.loc 1 188 0
+ 372 00a0 0C23     		movs	r3, #12
+ 373 00a2 FB18     		adds	r3, r7, r3
+ 374 00a4 6422     		movs	r2, #100
+ 375 00a6 1900     		movs	r1, r3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 11
 
 
- 459 0120 2A       		.byte	0x2a
- 460 0121 81000000 		.4byte	0x81
- 461 0125 03       		.uleb128 0x3
- 462 0126 91       		.byte	0x91
- 463 0127 B97F     		.sleb128 -71
- 464 0129 08       		.uleb128 0x8
- 465 012a A8010000 		.4byte	.LASF23
- 466 012e 01       		.byte	0x1
- 467 012f 2B       		.byte	0x2b
- 468 0130 81000000 		.4byte	0x81
- 469 0134 03       		.uleb128 0x3
- 470 0135 91       		.byte	0x91
- 471 0136 B87F     		.sleb128 -72
- 472 0138 07       		.uleb128 0x7
- 473 0139 6900     		.ascii	"i\000"
- 474 013b 01       		.byte	0x1
- 475 013c 2C       		.byte	0x2c
- 476 013d 73000000 		.4byte	0x73
- 477 0141 02       		.uleb128 0x2
- 478 0142 91       		.byte	0x91
- 479 0143 74       		.sleb128 -12
- 480 0144 08       		.uleb128 0x8
- 481 0145 1E000000 		.4byte	.LASF24
- 482 0149 01       		.byte	0x1
- 483 014a 3F       		.byte	0x3f
- 484 014b 64010000 		.4byte	0x164
- 485 014f 03       		.uleb128 0x3
- 486 0150 91       		.byte	0x91
- 487 0151 B47F     		.sleb128 -76
- 488 0153 00       		.byte	0
- 489 0154 09       		.uleb128 0x9
- 490 0155 B1000000 		.4byte	0xb1
- 491 0159 64010000 		.4byte	0x164
- 492 015d 0A       		.uleb128 0xa
- 493 015e BF000000 		.4byte	0xbf
- 494 0162 31       		.byte	0x31
- 495 0163 00       		.byte	0
- 496 0164 0B       		.uleb128 0xb
- 497 0165 81000000 		.4byte	0x81
- 498 0169 0A       		.uleb128 0xa
- 499 016a BF000000 		.4byte	0xbf
- 500 016e 02       		.byte	0x2
- 501 016f 00       		.byte	0
- 502 0170 00       		.byte	0
- 503              		.section	.debug_abbrev,"",%progbits
- 504              	.Ldebug_abbrev0:
- 505 0000 01       		.uleb128 0x1
- 506 0001 11       		.uleb128 0x11
- 507 0002 01       		.byte	0x1
- 508 0003 25       		.uleb128 0x25
- 509 0004 0E       		.uleb128 0xe
- 510 0005 13       		.uleb128 0x13
- 511 0006 0B       		.uleb128 0xb
- 512 0007 03       		.uleb128 0x3
- 513 0008 0E       		.uleb128 0xe
- 514 0009 1B       		.uleb128 0x1b
- 515 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 12
+ 376 00a8 0020     		movs	r0, #0
+ 377 00aa FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 189:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA, (uint8_t*) &checksum,100u);
+ 378              		.loc 1 189 0
+ 379 00ae 1223     		movs	r3, #18
+ 380 00b0 FB18     		adds	r3, r7, r3
+ 381 00b2 6422     		movs	r2, #100
+ 382 00b4 1900     		movs	r1, r3
+ 383 00b6 0120     		movs	r0, #1
+ 384 00b8 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 190:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 385              		.loc 1 190 0
+ 386 00bc 6420     		movs	r0, #100
+ 387 00be FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 191:main.c        ****     
+ 192:main.c        ****     VRMS = (resbyte2 << 8) | resbyte1;
+ 388              		.loc 1 192 0
+ 389 00c2 0E23     		movs	r3, #14
+ 390 00c4 FB18     		adds	r3, r7, r3
+ 391 00c6 1B88     		ldrh	r3, [r3]
+ 392 00c8 1B02     		lsls	r3, r3, #8
+ 393 00ca 1AB2     		sxth	r2, r3
+ 394 00cc 0C23     		movs	r3, #12
+ 395 00ce FB18     		adds	r3, r7, r3
+ 396 00d0 1B88     		ldrh	r3, [r3]
+ 397 00d2 1BB2     		sxth	r3, r3
+ 398 00d4 1343     		orrs	r3, r2
+ 399 00d6 1AB2     		sxth	r2, r3
+ 400 00d8 1623     		movs	r3, #22
+ 401 00da FB18     		adds	r3, r7, r3
+ 402 00dc 1A80     		strh	r2, [r3]
+ 193:main.c        ****     return VRMS;
+ 403              		.loc 1 193 0
+ 404 00de 1623     		movs	r3, #22
+ 405 00e0 FB18     		adds	r3, r7, r3
+ 406 00e2 1B88     		ldrh	r3, [r3]
+ 194:main.c        **** }
+ 407              		.loc 1 194 0
+ 408 00e4 1800     		movs	r0, r3
+ 409 00e6 BD46     		mov	sp, r7
+ 410 00e8 06B0     		add	sp, sp, #24
+ 411              		@ sp needed
+ 412 00ea 80BD     		pop	{r7, pc}
+ 413              		.cfi_endproc
+ 414              	.LFE37:
+ 415              		.size	VRMS_Read, .-VRMS_Read
+ 416              		.section	.text.VRMS_Gain_Write,"ax",%progbits
+ 417              		.align	2
+ 418              		.global	VRMS_Gain_Write
+ 419              		.code	16
+ 420              		.thumb_func
+ 421              		.type	VRMS_Gain_Write, %function
+ 422              	VRMS_Gain_Write:
+ 423              	.LFB38:
+ 195:main.c        **** 
+ 196:main.c        **** void VRMS_Gain_Write(uint8_t address, uint8_t Send_High_Byte, uint8_t Send_Low_Byte, uint8_t checks
+ 424              		.loc 1 196 0
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 12
 
 
- 516 000b 55       		.uleb128 0x55
- 517 000c 17       		.uleb128 0x17
- 518 000d 11       		.uleb128 0x11
- 519 000e 01       		.uleb128 0x1
- 520 000f 10       		.uleb128 0x10
- 521 0010 17       		.uleb128 0x17
- 522 0011 00       		.byte	0
- 523 0012 00       		.byte	0
- 524 0013 02       		.uleb128 0x2
- 525 0014 24       		.uleb128 0x24
- 526 0015 00       		.byte	0
- 527 0016 0B       		.uleb128 0xb
- 528 0017 0B       		.uleb128 0xb
- 529 0018 3E       		.uleb128 0x3e
- 530 0019 0B       		.uleb128 0xb
- 531 001a 03       		.uleb128 0x3
- 532 001b 0E       		.uleb128 0xe
- 533 001c 00       		.byte	0
- 534 001d 00       		.byte	0
- 535 001e 03       		.uleb128 0x3
- 536 001f 16       		.uleb128 0x16
- 537 0020 00       		.byte	0
- 538 0021 03       		.uleb128 0x3
- 539 0022 0E       		.uleb128 0xe
- 540 0023 3A       		.uleb128 0x3a
- 541 0024 0B       		.uleb128 0xb
- 542 0025 3B       		.uleb128 0x3b
- 543 0026 0B       		.uleb128 0xb
- 544 0027 49       		.uleb128 0x49
- 545 0028 13       		.uleb128 0x13
- 546 0029 00       		.byte	0
- 547 002a 00       		.byte	0
- 548 002b 04       		.uleb128 0x4
- 549 002c 24       		.uleb128 0x24
- 550 002d 00       		.byte	0
- 551 002e 0B       		.uleb128 0xb
- 552 002f 0B       		.uleb128 0xb
- 553 0030 3E       		.uleb128 0x3e
- 554 0031 0B       		.uleb128 0xb
- 555 0032 03       		.uleb128 0x3
- 556 0033 08       		.uleb128 0x8
- 557 0034 00       		.byte	0
- 558 0035 00       		.byte	0
- 559 0036 05       		.uleb128 0x5
- 560 0037 16       		.uleb128 0x16
- 561 0038 00       		.byte	0
- 562 0039 03       		.uleb128 0x3
- 563 003a 0E       		.uleb128 0xe
- 564 003b 3A       		.uleb128 0x3a
- 565 003c 0B       		.uleb128 0xb
- 566 003d 3B       		.uleb128 0x3b
- 567 003e 05       		.uleb128 0x5
- 568 003f 49       		.uleb128 0x49
- 569 0040 13       		.uleb128 0x13
- 570 0041 00       		.byte	0
- 571 0042 00       		.byte	0
- 572 0043 06       		.uleb128 0x6
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 13
+ 425              		.cfi_startproc
+ 426              		@ args = 0, pretend = 0, frame = 8
+ 427              		@ frame_needed = 1, uses_anonymous_args = 0
+ 428 0000 B0B5     		push	{r4, r5, r7, lr}
+ 429              		.cfi_def_cfa_offset 16
+ 430              		.cfi_offset 4, -16
+ 431              		.cfi_offset 5, -12
+ 432              		.cfi_offset 7, -8
+ 433              		.cfi_offset 14, -4
+ 434 0002 82B0     		sub	sp, sp, #8
+ 435              		.cfi_def_cfa_offset 24
+ 436 0004 00AF     		add	r7, sp, #0
+ 437              		.cfi_def_cfa_register 7
+ 438 0006 0500     		movs	r5, r0
+ 439 0008 0C00     		movs	r4, r1
+ 440 000a 1000     		movs	r0, r2
+ 441 000c 1900     		movs	r1, r3
+ 442 000e FB1D     		adds	r3, r7, #7
+ 443 0010 2A1C     		adds	r2, r5, #0
+ 444 0012 1A70     		strb	r2, [r3]
+ 445 0014 BB1D     		adds	r3, r7, #6
+ 446 0016 221C     		adds	r2, r4, #0
+ 447 0018 1A70     		strb	r2, [r3]
+ 448 001a 7B1D     		adds	r3, r7, #5
+ 449 001c 021C     		adds	r2, r0, #0
+ 450 001e 1A70     		strb	r2, [r3]
+ 451 0020 3B1D     		adds	r3, r7, #4
+ 452 0022 0A1C     		adds	r2, r1, #0
+ 453 0024 1A70     		strb	r2, [r3]
+ 197:main.c        ****     
+ 198:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_WRITE_XFER_MODE, 100u);
+ 454              		.loc 1 198 0
+ 455 0026 FB1D     		adds	r3, r7, #7
+ 456 0028 1B78     		ldrb	r3, [r3]
+ 457 002a 6422     		movs	r2, #100
+ 458 002c 0021     		movs	r1, #0
+ 459 002e 1800     		movs	r0, r3
+ 460 0030 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 199:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_HEADER_BYTE, 100u);
+ 461              		.loc 1 199 0
+ 462 0034 6421     		movs	r1, #100
+ 463 0036 A520     		movs	r0, #165
+ 464 0038 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 200:main.c        ****     I2C_1_I2CMasterWriteByte(0x10, 100u);//# in frame
+ 465              		.loc 1 200 0
+ 466 003c 6421     		movs	r1, #100
+ 467 003e 1020     		movs	r0, #16
+ 468 0040 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 201:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_SET_ADD_PTR, 100u);
+ 469              		.loc 1 201 0
+ 470 0044 6421     		movs	r1, #100
+ 471 0046 4120     		movs	r0, #65
+ 472 0048 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 202:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_GEN_HIGH_ADDRESS, 100u);
+ 473              		.loc 1 202 0
+ 474 004c 6421     		movs	r1, #100
+ 475 004e 0020     		movs	r0, #0
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 13
 
 
- 573 0044 2E       		.uleb128 0x2e
- 574 0045 01       		.byte	0x1
- 575 0046 3F       		.uleb128 0x3f
- 576 0047 19       		.uleb128 0x19
- 577 0048 03       		.uleb128 0x3
- 578 0049 0E       		.uleb128 0xe
- 579 004a 3A       		.uleb128 0x3a
- 580 004b 0B       		.uleb128 0xb
- 581 004c 3B       		.uleb128 0x3b
- 582 004d 0B       		.uleb128 0xb
- 583 004e 27       		.uleb128 0x27
- 584 004f 19       		.uleb128 0x19
- 585 0050 49       		.uleb128 0x49
- 586 0051 13       		.uleb128 0x13
- 587 0052 11       		.uleb128 0x11
- 588 0053 01       		.uleb128 0x1
- 589 0054 12       		.uleb128 0x12
- 590 0055 06       		.uleb128 0x6
- 591 0056 40       		.uleb128 0x40
- 592 0057 18       		.uleb128 0x18
- 593 0058 9642     		.uleb128 0x2116
- 594 005a 19       		.uleb128 0x19
- 595 005b 01       		.uleb128 0x1
- 596 005c 13       		.uleb128 0x13
- 597 005d 00       		.byte	0
- 598 005e 00       		.byte	0
- 599 005f 07       		.uleb128 0x7
- 600 0060 34       		.uleb128 0x34
- 601 0061 00       		.byte	0
- 602 0062 03       		.uleb128 0x3
- 603 0063 08       		.uleb128 0x8
- 604 0064 3A       		.uleb128 0x3a
- 605 0065 0B       		.uleb128 0xb
- 606 0066 3B       		.uleb128 0x3b
- 607 0067 0B       		.uleb128 0xb
- 608 0068 49       		.uleb128 0x49
- 609 0069 13       		.uleb128 0x13
- 610 006a 02       		.uleb128 0x2
- 611 006b 18       		.uleb128 0x18
- 612 006c 00       		.byte	0
- 613 006d 00       		.byte	0
- 614 006e 08       		.uleb128 0x8
- 615 006f 34       		.uleb128 0x34
- 616 0070 00       		.byte	0
- 617 0071 03       		.uleb128 0x3
- 618 0072 0E       		.uleb128 0xe
- 619 0073 3A       		.uleb128 0x3a
- 620 0074 0B       		.uleb128 0xb
- 621 0075 3B       		.uleb128 0x3b
- 622 0076 0B       		.uleb128 0xb
- 623 0077 49       		.uleb128 0x49
- 624 0078 13       		.uleb128 0x13
- 625 0079 02       		.uleb128 0x2
- 626 007a 18       		.uleb128 0x18
- 627 007b 00       		.byte	0
- 628 007c 00       		.byte	0
- 629 007d 09       		.uleb128 0x9
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 14
+ 476 0050 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 203:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_LOW_VG_ADDRESS, 100u);
+ 477              		.loc 1 203 0
+ 478 0054 6421     		movs	r1, #100
+ 479 0056 6220     		movs	r0, #98
+ 480 0058 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 204:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_WRITE_REGISTER, 100u);
+ 481              		.loc 1 204 0
+ 482 005c 6421     		movs	r1, #100
+ 483 005e 4D20     		movs	r0, #77
+ 484 0060 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 205:main.c        ****     I2C_1_I2CMasterWriteByte(0x02, 100u);//# to read
+ 485              		.loc 1 205 0
+ 486 0064 6421     		movs	r1, #100
+ 487 0066 0220     		movs	r0, #2
+ 488 0068 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 206:main.c        ****     I2C_1_I2CMasterWriteByte(Send_High_Byte, 100u);
+ 489              		.loc 1 206 0
+ 490 006c BB1D     		adds	r3, r7, #6
+ 491 006e 1B78     		ldrb	r3, [r3]
+ 492 0070 6421     		movs	r1, #100
+ 493 0072 1800     		movs	r0, r3
+ 494 0074 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 207:main.c        ****     I2C_1_I2CMasterWriteByte(Send_Low_Byte, 100u);
+ 495              		.loc 1 207 0
+ 496 0078 7B1D     		adds	r3, r7, #5
+ 497 007a 1B78     		ldrb	r3, [r3]
+ 498 007c 6421     		movs	r1, #100
+ 499 007e 1800     		movs	r0, r3
+ 500 0080 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 208:main.c        ****     I2C_1_I2CMasterWriteByte(checksum, 100u);
+ 501              		.loc 1 208 0
+ 502 0084 3B1D     		adds	r3, r7, #4
+ 503 0086 1B78     		ldrb	r3, [r3]
+ 504 0088 6421     		movs	r1, #100
+ 505 008a 1800     		movs	r0, r3
+ 506 008c FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 209:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 507              		.loc 1 209 0
+ 508 0090 6420     		movs	r0, #100
+ 509 0092 FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 210:main.c        ****     
+ 211:main.c        **** }
+ 510              		.loc 1 211 0
+ 511 0096 C046     		nop
+ 512 0098 BD46     		mov	sp, r7
+ 513 009a 02B0     		add	sp, sp, #8
+ 514              		@ sp needed
+ 515 009c B0BD     		pop	{r4, r5, r7, pc}
+ 516              		.cfi_endproc
+ 517              	.LFE38:
+ 518              		.size	VRMS_Gain_Write, .-VRMS_Gain_Write
+ 519 009e C046     		.section	.text.IRMS_Read,"ax",%progbits
+ 520              		.align	2
+ 521              		.global	IRMS_Read
+ 522              		.code	16
+ 523              		.thumb_func
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 14
 
 
- 630 007e 01       		.uleb128 0x1
- 631 007f 01       		.byte	0x1
- 632 0080 49       		.uleb128 0x49
- 633 0081 13       		.uleb128 0x13
- 634 0082 01       		.uleb128 0x1
- 635 0083 13       		.uleb128 0x13
- 636 0084 00       		.byte	0
- 637 0085 00       		.byte	0
- 638 0086 0A       		.uleb128 0xa
- 639 0087 21       		.uleb128 0x21
- 640 0088 00       		.byte	0
- 641 0089 49       		.uleb128 0x49
- 642 008a 13       		.uleb128 0x13
- 643 008b 2F       		.uleb128 0x2f
- 644 008c 0B       		.uleb128 0xb
- 645 008d 00       		.byte	0
- 646 008e 00       		.byte	0
- 647 008f 0B       		.uleb128 0xb
- 648 0090 01       		.uleb128 0x1
- 649 0091 01       		.byte	0x1
- 650 0092 49       		.uleb128 0x49
- 651 0093 13       		.uleb128 0x13
- 652 0094 00       		.byte	0
- 653 0095 00       		.byte	0
- 654 0096 00       		.byte	0
- 655              		.section	.debug_aranges,"",%progbits
- 656 0000 1C000000 		.4byte	0x1c
- 657 0004 0200     		.2byte	0x2
- 658 0006 00000000 		.4byte	.Ldebug_info0
- 659 000a 04       		.byte	0x4
- 660 000b 00       		.byte	0
- 661 000c 0000     		.2byte	0
- 662 000e 0000     		.2byte	0
- 663 0010 00000000 		.4byte	.LFB36
- 664 0014 D0010000 		.4byte	.LFE36-.LFB36
- 665 0018 00000000 		.4byte	0
- 666 001c 00000000 		.4byte	0
- 667              		.section	.debug_ranges,"",%progbits
- 668              	.Ldebug_ranges0:
- 669 0000 00000000 		.4byte	.LFB36
- 670 0004 D0010000 		.4byte	.LFE36
- 671 0008 00000000 		.4byte	0
- 672 000c 00000000 		.4byte	0
- 673              		.section	.debug_line,"",%progbits
- 674              	.Ldebug_line0:
- 675 0000 B9010000 		.section	.debug_str,"MS",%progbits,1
- 675      02003E01 
- 675      00000201 
- 675      FB0E0D00 
- 675      01010101 
- 676              	.LASF5:
- 677 0000 5F5F7569 		.ascii	"__uint8_t\000"
- 677      6E74385F 
- 677      7400
- 678              	.LASF14:
- 679 000a 666C6F61 		.ascii	"float\000"
- 679      7400
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 15
+ 524              		.type	IRMS_Read, %function
+ 525              	IRMS_Read:
+ 526              	.LFB39:
+ 212:main.c        **** 
+ 213:main.c        **** 
+ 214:main.c        **** uint16_t IRMS_Read(uint8_t address){
+ 527              		.loc 1 214 0
+ 528              		.cfi_startproc
+ 529              		@ args = 0, pretend = 0, frame = 32
+ 530              		@ frame_needed = 1, uses_anonymous_args = 0
+ 531 0000 80B5     		push	{r7, lr}
+ 532              		.cfi_def_cfa_offset 8
+ 533              		.cfi_offset 7, -8
+ 534              		.cfi_offset 14, -4
+ 535 0002 88B0     		sub	sp, sp, #32
+ 536              		.cfi_def_cfa_offset 40
+ 537 0004 00AF     		add	r7, sp, #0
+ 538              		.cfi_def_cfa_register 7
+ 539 0006 0200     		movs	r2, r0
+ 540 0008 FB1D     		adds	r3, r7, #7
+ 541 000a 1A70     		strb	r2, [r3]
+ 215:main.c        ****     uint16_t ack, checksum, numBytes, resbyte2, resbyte1;
+ 216:main.c        ****     uint32_t resbyte4, resbyte3;
+ 217:main.c        ****     uint16_t IRMS;
+ 218:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_WRITE_XFER_MODE, 100u);
+ 542              		.loc 1 218 0
+ 543 000c FB1D     		adds	r3, r7, #7
+ 544 000e 1B78     		ldrb	r3, [r3]
+ 545 0010 6422     		movs	r2, #100
+ 546 0012 0021     		movs	r1, #0
+ 547 0014 1800     		movs	r0, r3
+ 548 0016 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 219:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_HEADER_BYTE, 100u);
+ 549              		.loc 1 219 0
+ 550 001a 6421     		movs	r1, #100
+ 551 001c A520     		movs	r0, #165
+ 552 001e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 220:main.c        ****     I2C_1_I2CMasterWriteByte(0x08, 100u);//# in frame
+ 553              		.loc 1 220 0
+ 554 0022 6421     		movs	r1, #100
+ 555 0024 0820     		movs	r0, #8
+ 556 0026 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 221:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_SET_ADD_PTR, 100u);
+ 557              		.loc 1 221 0
+ 558 002a 6421     		movs	r1, #100
+ 559 002c 4120     		movs	r0, #65
+ 560 002e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 222:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_GEN_HIGH_ADDRESS, 100u);
+ 561              		.loc 1 222 0
+ 562 0032 6421     		movs	r1, #100
+ 563 0034 0020     		movs	r0, #0
+ 564 0036 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 223:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_LOW_IRMS_ADDRESS, 100u);
+ 565              		.loc 1 223 0
+ 566 003a 6421     		movs	r1, #100
+ 567 003c 0E20     		movs	r0, #14
+ 568 003e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 15
 
 
- 680              	.LASF1:
- 681 0010 756E7369 		.ascii	"unsigned char\000"
- 681      676E6564 
- 681      20636861 
- 681      7200
- 682              	.LASF24:
- 683 001e 706F7765 		.ascii	"powerAddresses\000"
- 683      72416464 
- 683      72657373 
- 683      657300
- 684              	.LASF7:
- 685 002d 6C6F6E67 		.ascii	"long unsigned int\000"
- 685      20756E73 
- 685      69676E65 
- 685      6420696E 
- 685      7400
- 686              	.LASF3:
- 687 003f 73686F72 		.ascii	"short unsigned int\000"
- 687      7420756E 
- 687      7369676E 
- 687      65642069 
- 687      6E7400
- 688              	.LASF25:
- 689 0052 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 689      43313120 
- 689      352E342E 
- 689      31203230 
- 689      31363036 
- 690 0085 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 690      20726576 
- 690      6973696F 
- 690      6E203233 
- 690      37373135 
- 691 00b8 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 691      66756E63 
- 691      74696F6E 
- 691      2D736563 
- 691      74696F6E 
- 692              	.LASF15:
- 693 00e0 646F7562 		.ascii	"double\000"
- 693      6C6500
- 694              	.LASF6:
- 695 00e7 5F5F7569 		.ascii	"__uint32_t\000"
- 695      6E743332 
- 695      5F7400
- 696              	.LASF27:
- 697 00f2 433A5C55 		.ascii	"C:\\Users\\K-Narf\\Documents\\Senior Design Code Te"
- 697      73657273 
- 697      5C4B2D4E 
- 697      6172665C 
- 697      446F6375 
- 698 0121 7374696E 		.ascii	"sting\\Power_Chip_Test\\Power_Chip_Test.cydsn\000"
- 698      675C506F 
- 698      7765725F 
- 698      43686970 
- 698      5F546573 
- 699              	.LASF28:
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 16
+ 224:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_READ_REGISTER, 100u);
+ 569              		.loc 1 224 0
+ 570 0042 6421     		movs	r1, #100
+ 571 0044 4E20     		movs	r0, #78
+ 572 0046 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 225:main.c        ****     I2C_1_I2CMasterWriteByte(0x02, 100u);//# to read
+ 573              		.loc 1 225 0
+ 574 004a 6421     		movs	r1, #100
+ 575 004c 0220     		movs	r0, #2
+ 576 004e FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 226:main.c        ****     I2C_1_I2CMasterWriteByte(0x4C, 100u);
+ 577              		.loc 1 226 0
+ 578 0052 6421     		movs	r1, #100
+ 579 0054 4C20     		movs	r0, #76
+ 580 0056 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 227:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 581              		.loc 1 227 0
+ 582 005a 6420     		movs	r0, #100
+ 583 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 228:main.c        ****     
+ 229:main.c        ****     I2C_1_Sleep();
+ 584              		.loc 1 229 0
+ 585 0060 FFF7FEFF 		bl	I2C_1_Sleep
+ 230:main.c        ****     I2C_1_Wakeup();
+ 586              		.loc 1 230 0
+ 587 0064 FFF7FEFF 		bl	I2C_1_Wakeup
+ 231:main.c        ****     
+ 232:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_READ_XFER_MODE, 100u);
+ 588              		.loc 1 232 0
+ 589 0068 FB1D     		adds	r3, r7, #7
+ 590 006a 1B78     		ldrb	r3, [r3]
+ 591 006c 6422     		movs	r2, #100
+ 592 006e 0121     		movs	r1, #1
+ 593 0070 1800     		movs	r0, r3
+ 594 0072 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 233:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &ack,100u);
+ 595              		.loc 1 233 0
+ 596 0076 1C23     		movs	r3, #28
+ 597 0078 FB18     		adds	r3, r7, r3
+ 598 007a 6422     		movs	r2, #100
+ 599 007c 1900     		movs	r1, r3
+ 600 007e 0020     		movs	r0, #0
+ 601 0080 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 234:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &numBytes,100u);
+ 602              		.loc 1 234 0
+ 603 0084 1823     		movs	r3, #24
+ 604 0086 FB18     		adds	r3, r7, r3
+ 605 0088 6422     		movs	r2, #100
+ 606 008a 1900     		movs	r1, r3
+ 607 008c 0020     		movs	r0, #0
+ 608 008e FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 235:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte4,100u);
+ 609              		.loc 1 235 0
+ 610 0092 1023     		movs	r3, #16
+ 611 0094 FB18     		adds	r3, r7, r3
+ 612 0096 6422     		movs	r2, #100
+ 613 0098 1900     		movs	r1, r3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 16
 
 
- 700 014d 6D61696E 		.ascii	"main\000"
- 700      00
- 701              	.LASF10:
- 702 0152 756E7369 		.ascii	"unsigned int\000"
- 702      676E6564 
- 702      20696E74 
- 702      00
- 703              	.LASF9:
- 704 015f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 704      206C6F6E 
- 704      6720756E 
- 704      7369676E 
- 704      65642069 
- 705              	.LASF11:
- 706 0176 75696E74 		.ascii	"uint8_t\000"
- 706      385F7400 
- 707              	.LASF19:
- 708 017e 72657375 		.ascii	"result\000"
- 708      6C7400
- 709              	.LASF18:
- 710 0185 73697A65 		.ascii	"sizetype\000"
- 710      74797065 
- 710      00
- 711              	.LASF8:
- 712 018e 6C6F6E67 		.ascii	"long long int\000"
- 712      206C6F6E 
- 712      6720696E 
- 712      7400
- 713              	.LASF26:
- 714 019c 6D61696E 		.ascii	"main.c\000"
- 714      2E6300
- 715              	.LASF16:
- 716 01a3 63686172 		.ascii	"char\000"
- 716      00
- 717              	.LASF23:
- 718 01a8 72657362 		.ascii	"resbyte1\000"
- 718      79746531 
- 718      00
- 719              	.LASF22:
- 720 01b1 72657362 		.ascii	"resbyte2\000"
- 720      79746532 
- 720      00
- 721              	.LASF21:
- 722 01ba 72657362 		.ascii	"resbyte3\000"
- 722      79746533 
- 722      00
- 723              	.LASF20:
- 724 01c3 72657362 		.ascii	"resbyte4\000"
- 724      79746534 
- 724      00
- 725              	.LASF2:
- 726 01cc 73686F72 		.ascii	"short int\000"
- 726      7420696E 
- 726      7400
- 727              	.LASF13:
- 728 01d6 75696E74 		.ascii	"uint8\000"
- 728      3800
-ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKltRTg.s 			page 17
+ 614 009a 0020     		movs	r0, #0
+ 615 009c FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 236:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte3,100u);
+ 616              		.loc 1 236 0
+ 617 00a0 0C23     		movs	r3, #12
+ 618 00a2 FB18     		adds	r3, r7, r3
+ 619 00a4 6422     		movs	r2, #100
+ 620 00a6 1900     		movs	r1, r3
+ 621 00a8 0020     		movs	r0, #0
+ 622 00aa FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 237:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte2,100u);
+ 623              		.loc 1 237 0
+ 624 00ae 1623     		movs	r3, #22
+ 625 00b0 FB18     		adds	r3, r7, r3
+ 626 00b2 6422     		movs	r2, #100
+ 627 00b4 1900     		movs	r1, r3
+ 628 00b6 0020     		movs	r0, #0
+ 629 00b8 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 238:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, (uint8_t*) &resbyte1,100u);
+ 630              		.loc 1 238 0
+ 631 00bc 1423     		movs	r3, #20
+ 632 00be FB18     		adds	r3, r7, r3
+ 633 00c0 6422     		movs	r2, #100
+ 634 00c2 1900     		movs	r1, r3
+ 635 00c4 0020     		movs	r0, #0
+ 636 00c6 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 239:main.c        ****     I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA, (uint8_t*) &checksum,100u);
+ 637              		.loc 1 239 0
+ 638 00ca 1A23     		movs	r3, #26
+ 639 00cc FB18     		adds	r3, r7, r3
+ 640 00ce 6422     		movs	r2, #100
+ 641 00d0 1900     		movs	r1, r3
+ 642 00d2 0120     		movs	r0, #1
+ 643 00d4 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
+ 240:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 644              		.loc 1 240 0
+ 645 00d8 6420     		movs	r0, #100
+ 646 00da FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 241:main.c        ****     
+ 242:main.c        ****     IRMS = (resbyte4 << 24) | (resbyte3 <<16 ) | (resbyte2 << 8) | resbyte1;
+ 647              		.loc 1 242 0
+ 648 00de 1623     		movs	r3, #22
+ 649 00e0 FB18     		adds	r3, r7, r3
+ 650 00e2 1B88     		ldrh	r3, [r3]
+ 651 00e4 1B02     		lsls	r3, r3, #8
+ 652 00e6 99B2     		uxth	r1, r3
+ 653 00e8 1423     		movs	r3, #20
+ 654 00ea FB18     		adds	r3, r7, r3
+ 655 00ec 1A88     		ldrh	r2, [r3]
+ 656 00ee 1E23     		movs	r3, #30
+ 657 00f0 FB18     		adds	r3, r7, r3
+ 658 00f2 0A43     		orrs	r2, r1
+ 659 00f4 1A80     		strh	r2, [r3]
+ 243:main.c        ****     return IRMS;
+ 660              		.loc 1 243 0
+ 661 00f6 1E23     		movs	r3, #30
+ 662 00f8 FB18     		adds	r3, r7, r3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 17
 
 
- 729              	.LASF12:
- 730 01dc 75696E74 		.ascii	"uint32_t\000"
- 730      33325F74 
- 730      00
- 731              	.LASF4:
- 732 01e5 6C6F6E67 		.ascii	"long int\000"
- 732      20696E74 
- 732      00
- 733              	.LASF17:
- 734 01ee 6C6F6E67 		.ascii	"long double\000"
- 734      20646F75 
- 734      626C6500 
- 735              	.LASF0:
- 736 01fa 7369676E 		.ascii	"signed char\000"
- 736      65642063 
- 736      68617200 
- 737              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 663 00fa 1B88     		ldrh	r3, [r3]
+ 244:main.c        **** }
+ 664              		.loc 1 244 0
+ 665 00fc 1800     		movs	r0, r3
+ 666 00fe BD46     		mov	sp, r7
+ 667 0100 08B0     		add	sp, sp, #32
+ 668              		@ sp needed
+ 669 0102 80BD     		pop	{r7, pc}
+ 670              		.cfi_endproc
+ 671              	.LFE39:
+ 672              		.size	IRMS_Read, .-IRMS_Read
+ 673              		.section	.text.IRMS_Gain_Write,"ax",%progbits
+ 674              		.align	2
+ 675              		.global	IRMS_Gain_Write
+ 676              		.code	16
+ 677              		.thumb_func
+ 678              		.type	IRMS_Gain_Write, %function
+ 679              	IRMS_Gain_Write:
+ 680              	.LFB40:
+ 245:main.c        **** 
+ 246:main.c        **** void IRMS_Gain_Write(uint8_t address, uint8_t Send_High_Byte, uint8_t Send_Low_Byte, uint8_t checks
+ 681              		.loc 1 246 0
+ 682              		.cfi_startproc
+ 683              		@ args = 0, pretend = 0, frame = 8
+ 684              		@ frame_needed = 1, uses_anonymous_args = 0
+ 685 0000 B0B5     		push	{r4, r5, r7, lr}
+ 686              		.cfi_def_cfa_offset 16
+ 687              		.cfi_offset 4, -16
+ 688              		.cfi_offset 5, -12
+ 689              		.cfi_offset 7, -8
+ 690              		.cfi_offset 14, -4
+ 691 0002 82B0     		sub	sp, sp, #8
+ 692              		.cfi_def_cfa_offset 24
+ 693 0004 00AF     		add	r7, sp, #0
+ 694              		.cfi_def_cfa_register 7
+ 695 0006 0500     		movs	r5, r0
+ 696 0008 0C00     		movs	r4, r1
+ 697 000a 1000     		movs	r0, r2
+ 698 000c 1900     		movs	r1, r3
+ 699 000e FB1D     		adds	r3, r7, #7
+ 700 0010 2A1C     		adds	r2, r5, #0
+ 701 0012 1A70     		strb	r2, [r3]
+ 702 0014 BB1D     		adds	r3, r7, #6
+ 703 0016 221C     		adds	r2, r4, #0
+ 704 0018 1A70     		strb	r2, [r3]
+ 705 001a 7B1D     		adds	r3, r7, #5
+ 706 001c 021C     		adds	r2, r0, #0
+ 707 001e 1A70     		strb	r2, [r3]
+ 708 0020 3B1D     		adds	r3, r7, #4
+ 709 0022 0A1C     		adds	r2, r1, #0
+ 710 0024 1A70     		strb	r2, [r3]
+ 247:main.c        ****     
+ 248:main.c        ****     I2C_1_I2CMasterSendStart(address, I2C_1_I2C_WRITE_XFER_MODE, 100u);
+ 711              		.loc 1 248 0
+ 712 0026 FB1D     		adds	r3, r7, #7
+ 713 0028 1B78     		ldrb	r3, [r3]
+ 714 002a 6422     		movs	r2, #100
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 18
+
+
+ 715 002c 0021     		movs	r1, #0
+ 716 002e 1800     		movs	r0, r3
+ 717 0030 FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 249:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_HEADER_BYTE, 100u);
+ 718              		.loc 1 249 0
+ 719 0034 6421     		movs	r1, #100
+ 720 0036 A520     		movs	r0, #165
+ 721 0038 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 250:main.c        ****     I2C_1_I2CMasterWriteByte(0x10, 100u);//# in frame
+ 722              		.loc 1 250 0
+ 723 003c 6421     		movs	r1, #100
+ 724 003e 1020     		movs	r0, #16
+ 725 0040 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 251:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_SET_ADD_PTR, 100u);
+ 726              		.loc 1 251 0
+ 727 0044 6421     		movs	r1, #100
+ 728 0046 4120     		movs	r0, #65
+ 729 0048 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 252:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_GEN_HIGH_ADDRESS, 100u);
+ 730              		.loc 1 252 0
+ 731 004c 6421     		movs	r1, #100
+ 732 004e 0020     		movs	r0, #0
+ 733 0050 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 253:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_LOW_IG_ADDRESS, 100u);
+ 734              		.loc 1 253 0
+ 735 0054 6421     		movs	r1, #100
+ 736 0056 6020     		movs	r0, #96
+ 737 0058 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 254:main.c        ****     I2C_1_I2CMasterWriteByte(POWER_CHIP_WRITE_REGISTER, 100u);
+ 738              		.loc 1 254 0
+ 739 005c 6421     		movs	r1, #100
+ 740 005e 4D20     		movs	r0, #77
+ 741 0060 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 255:main.c        ****     I2C_1_I2CMasterWriteByte(0x02, 100u);//# to read
+ 742              		.loc 1 255 0
+ 743 0064 6421     		movs	r1, #100
+ 744 0066 0220     		movs	r0, #2
+ 745 0068 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 256:main.c        ****     I2C_1_I2CMasterWriteByte(Send_High_Byte, 100u);
+ 746              		.loc 1 256 0
+ 747 006c BB1D     		adds	r3, r7, #6
+ 748 006e 1B78     		ldrb	r3, [r3]
+ 749 0070 6421     		movs	r1, #100
+ 750 0072 1800     		movs	r0, r3
+ 751 0074 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 257:main.c        ****     I2C_1_I2CMasterWriteByte(Send_Low_Byte, 100u);
+ 752              		.loc 1 257 0
+ 753 0078 7B1D     		adds	r3, r7, #5
+ 754 007a 1B78     		ldrb	r3, [r3]
+ 755 007c 6421     		movs	r1, #100
+ 756 007e 1800     		movs	r0, r3
+ 757 0080 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 258:main.c        ****     I2C_1_I2CMasterWriteByte(checksum, 100u);
+ 758              		.loc 1 258 0
+ 759 0084 3B1D     		adds	r3, r7, #4
+ 760 0086 1B78     		ldrb	r3, [r3]
+ 761 0088 6421     		movs	r1, #100
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 19
+
+
+ 762 008a 1800     		movs	r0, r3
+ 763 008c FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 259:main.c        ****     I2C_1_I2CMasterSendStop(100u);
+ 764              		.loc 1 259 0
+ 765 0090 6420     		movs	r0, #100
+ 766 0092 FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
+ 260:main.c        ****     
+ 261:main.c        **** }...
+ 767              		.loc 1 261 0
+ 768 0096 C046     		nop
+ 769 0098 BD46     		mov	sp, r7
+ 770 009a 02B0     		add	sp, sp, #8
+ 771              		@ sp needed
+ 772 009c B0BD     		pop	{r4, r5, r7, pc}
+ 773              		.cfi_endproc
+ 774              	.LFE40:
+ 775              		.size	IRMS_Gain_Write, .-IRMS_Gain_Write
+ 776 009e C046     		.text
+ 777              	.Letext0:
+ 778              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 779              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 780              		.section	.debug_info,"",%progbits
+ 781              	.Ldebug_info0:
+ 782 0000 72030000 		.4byte	0x372
+ 783 0004 0400     		.2byte	0x4
+ 784 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 785 000a 04       		.byte	0x4
+ 786 000b 01       		.uleb128 0x1
+ 787 000c 8D000000 		.4byte	.LASF39
+ 788 0010 0C       		.byte	0xc
+ 789 0011 10020000 		.4byte	.LASF40
+ 790 0015 42010000 		.4byte	.LASF41
+ 791 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 792 001d 00000000 		.4byte	0
+ 793 0021 00000000 		.4byte	.Ldebug_line0
+ 794 0025 02       		.uleb128 0x2
+ 795 0026 01       		.byte	0x1
+ 796 0027 06       		.byte	0x6
+ 797 0028 90020000 		.4byte	.LASF0
+ 798 002c 03       		.uleb128 0x3
+ 799 002d 00000000 		.4byte	.LASF3
+ 800 0031 02       		.byte	0x2
+ 801 0032 1D       		.byte	0x1d
+ 802 0033 37000000 		.4byte	0x37
+ 803 0037 02       		.uleb128 0x2
+ 804 0038 01       		.byte	0x1
+ 805 0039 08       		.byte	0x8
+ 806 003a 4B000000 		.4byte	.LASF1
+ 807 003e 02       		.uleb128 0x2
+ 808 003f 02       		.byte	0x2
+ 809 0040 05       		.byte	0x5
+ 810 0041 40020000 		.4byte	.LASF2
+ 811 0045 03       		.uleb128 0x3
+ 812 0046 25010000 		.4byte	.LASF4
+ 813 004a 02       		.byte	0x2
+ 814 004b 2B       		.byte	0x2b
+ 815 004c 50000000 		.4byte	0x50
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 20
+
+
+ 816 0050 02       		.uleb128 0x2
+ 817 0051 02       		.byte	0x2
+ 818 0052 07       		.byte	0x7
+ 819 0053 7A000000 		.4byte	.LASF5
+ 820 0057 02       		.uleb128 0x2
+ 821 0058 04       		.byte	0x4
+ 822 0059 05       		.byte	0x5
+ 823 005a 7B020000 		.4byte	.LASF6
+ 824 005e 03       		.uleb128 0x3
+ 825 005f 37010000 		.4byte	.LASF7
+ 826 0063 02       		.byte	0x2
+ 827 0064 41       		.byte	0x41
+ 828 0065 69000000 		.4byte	0x69
+ 829 0069 02       		.uleb128 0x2
+ 830 006a 04       		.byte	0x4
+ 831 006b 07       		.byte	0x7
+ 832 006c 68000000 		.4byte	.LASF8
+ 833 0070 02       		.uleb128 0x2
+ 834 0071 08       		.byte	0x8
+ 835 0072 05       		.byte	0x5
+ 836 0073 02020000 		.4byte	.LASF9
+ 837 0077 02       		.uleb128 0x2
+ 838 0078 08       		.byte	0x8
+ 839 0079 07       		.byte	0x7
+ 840 007a B7010000 		.4byte	.LASF10
+ 841 007e 04       		.uleb128 0x4
+ 842 007f 04       		.byte	0x4
+ 843 0080 05       		.byte	0x5
+ 844 0081 696E7400 		.ascii	"int\000"
+ 845 0085 02       		.uleb128 0x2
+ 846 0086 04       		.byte	0x4
+ 847 0087 07       		.byte	0x7
+ 848 0088 A2010000 		.4byte	.LASF11
+ 849 008c 03       		.uleb128 0x3
+ 850 008d CE010000 		.4byte	.LASF12
+ 851 0091 03       		.byte	0x3
+ 852 0092 18       		.byte	0x18
+ 853 0093 2C000000 		.4byte	0x2c
+ 854 0097 03       		.uleb128 0x3
+ 855 0098 59020000 		.4byte	.LASF13
+ 856 009c 03       		.byte	0x3
+ 857 009d 24       		.byte	0x24
+ 858 009e 45000000 		.4byte	0x45
+ 859 00a2 03       		.uleb128 0x3
+ 860 00a3 72020000 		.4byte	.LASF14
+ 861 00a7 03       		.byte	0x3
+ 862 00a8 30       		.byte	0x30
+ 863 00a9 5E000000 		.4byte	0x5e
+ 864 00ad 02       		.uleb128 0x2
+ 865 00ae 04       		.byte	0x4
+ 866 00af 04       		.byte	0x4
+ 867 00b0 3C000000 		.4byte	.LASF15
+ 868 00b4 02       		.uleb128 0x2
+ 869 00b5 08       		.byte	0x8
+ 870 00b6 04       		.byte	0x4
+ 871 00b7 30010000 		.4byte	.LASF16
+ 872 00bb 02       		.uleb128 0x2
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 21
+
+
+ 873 00bc 01       		.byte	0x1
+ 874 00bd 08       		.byte	0x8
+ 875 00be 17020000 		.4byte	.LASF17
+ 876 00c2 02       		.uleb128 0x2
+ 877 00c3 08       		.byte	0x8
+ 878 00c4 04       		.byte	0x4
+ 879 00c5 84020000 		.4byte	.LASF18
+ 880 00c9 02       		.uleb128 0x2
+ 881 00ca 04       		.byte	0x4
+ 882 00cb 07       		.byte	0x7
+ 883 00cc F9010000 		.4byte	.LASF19
+ 884 00d0 05       		.uleb128 0x5
+ 885 00d1 9D010000 		.4byte	.LASF33
+ 886 00d5 01       		.byte	0x1
+ 887 00d6 2C       		.byte	0x2c
+ 888 00d7 7E000000 		.4byte	0x7e
+ 889 00db 00000000 		.4byte	.LFB36
+ 890 00df A0010000 		.4byte	.LFE36-.LFB36
+ 891 00e3 01       		.uleb128 0x1
+ 892 00e4 9C       		.byte	0x9c
+ 893 00e5 A9010000 		.4byte	0x1a9
+ 894 00e9 06       		.uleb128 0x6
+ 895 00ea 73747200 		.ascii	"str\000"
+ 896 00ee 01       		.byte	0x1
+ 897 00ef 31       		.byte	0x31
+ 898 00f0 A9010000 		.4byte	0x1a9
+ 899 00f4 03       		.uleb128 0x3
+ 900 00f5 91       		.byte	0x91
+ 901 00f6 B07F     		.sleb128 -80
+ 902 00f8 07       		.uleb128 0x7
+ 903 00f9 D6010000 		.4byte	.LASF20
+ 904 00fd 01       		.byte	0x1
+ 905 00fe 32       		.byte	0x32
+ 906 00ff 7E000000 		.4byte	0x7e
+ 907 0103 08       		.uleb128 0x8
+ 908 0104 61636B00 		.ascii	"ack\000"
+ 909 0108 01       		.byte	0x1
+ 910 0109 33       		.byte	0x33
+ 911 010a 8C000000 		.4byte	0x8c
+ 912 010e 07       		.uleb128 0x7
+ 913 010f F0010000 		.4byte	.LASF21
+ 914 0113 01       		.byte	0x1
+ 915 0114 33       		.byte	0x33
+ 916 0115 8C000000 		.4byte	0x8c
+ 917 0119 09       		.uleb128 0x9
+ 918 011a 4A020000 		.4byte	.LASF22
+ 919 011e 01       		.byte	0x1
+ 920 011f 33       		.byte	0x33
+ 921 0120 8C000000 		.4byte	0x8c
+ 922 0124 02       		.uleb128 0x2
+ 923 0125 91       		.byte	0x91
+ 924 0126 69       		.sleb128 -23
+ 925 0127 09       		.uleb128 0x9
+ 926 0128 E2010000 		.4byte	.LASF23
+ 927 012c 01       		.byte	0x1
+ 928 012d 33       		.byte	0x33
+ 929 012e 8C000000 		.4byte	0x8c
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 22
+
+
+ 930 0132 02       		.uleb128 0x2
+ 931 0133 91       		.byte	0x91
+ 932 0134 68       		.sleb128 -24
+ 933 0135 07       		.uleb128 0x7
+ 934 0136 42000000 		.4byte	.LASF24
+ 935 013a 01       		.byte	0x1
+ 936 013b 34       		.byte	0x34
+ 937 013c 97000000 		.4byte	0x97
+ 938 0140 09       		.uleb128 0x9
+ 939 0141 1B010000 		.4byte	.LASF25
+ 940 0145 01       		.byte	0x1
+ 941 0146 35       		.byte	0x35
+ 942 0147 97000000 		.4byte	0x97
+ 943 014b 02       		.uleb128 0x2
+ 944 014c 91       		.byte	0x91
+ 945 014d 6E       		.sleb128 -18
+ 946 014e 09       		.uleb128 0x9
+ 947 014f 19000000 		.4byte	.LASF26
+ 948 0153 01       		.byte	0x1
+ 949 0154 36       		.byte	0x36
+ 950 0155 97000000 		.4byte	0x97
+ 951 0159 02       		.uleb128 0x2
+ 952 015a 91       		.byte	0x91
+ 953 015b 6A       		.sleb128 -22
+ 954 015c 09       		.uleb128 0x9
+ 955 015d 0A000000 		.4byte	.LASF27
+ 956 0161 01       		.byte	0x1
+ 957 0162 37       		.byte	0x37
+ 958 0163 97000000 		.4byte	0x97
+ 959 0167 02       		.uleb128 0x2
+ 960 0168 91       		.byte	0x91
+ 961 0169 6C       		.sleb128 -20
+ 962 016a 07       		.uleb128 0x7
+ 963 016b 25020000 		.4byte	.LASF28
+ 964 016f 01       		.byte	0x1
+ 965 0170 3A       		.byte	0x3a
+ 966 0171 A2000000 		.4byte	0xa2
+ 967 0175 07       		.uleb128 0x7
+ 968 0176 1C020000 		.4byte	.LASF29
+ 969 017a 01       		.byte	0x1
+ 970 017b 3B       		.byte	0x3b
+ 971 017c A2000000 		.4byte	0xa2
+ 972 0180 09       		.uleb128 0x9
+ 973 0181 59000000 		.4byte	.LASF30
+ 974 0185 01       		.byte	0x1
+ 975 0186 51       		.byte	0x51
+ 976 0187 B9010000 		.4byte	0x1b9
+ 977 018b 03       		.uleb128 0x3
+ 978 018c 91       		.byte	0x91
+ 979 018d AC7F     		.sleb128 -84
+ 980 018f 07       		.uleb128 0x7
+ 981 0190 20010000 		.4byte	.LASF31
+ 982 0194 01       		.byte	0x1
+ 983 0195 52       		.byte	0x52
+ 984 0196 97000000 		.4byte	0x97
+ 985 019a 09       		.uleb128 0x9
+ 986 019b DD010000 		.4byte	.LASF32
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 23
+
+
+ 987 019f 01       		.byte	0x1
+ 988 01a0 53       		.byte	0x53
+ 989 01a1 A2000000 		.4byte	0xa2
+ 990 01a5 02       		.uleb128 0x2
+ 991 01a6 91       		.byte	0x91
+ 992 01a7 64       		.sleb128 -28
+ 993 01a8 00       		.byte	0
+ 994 01a9 0A       		.uleb128 0xa
+ 995 01aa BB000000 		.4byte	0xbb
+ 996 01ae B9010000 		.4byte	0x1b9
+ 997 01b2 0B       		.uleb128 0xb
+ 998 01b3 C9000000 		.4byte	0xc9
+ 999 01b7 31       		.byte	0x31
+ 1000 01b8 00       		.byte	0
+ 1001 01b9 0A       		.uleb128 0xa
+ 1002 01ba 8C000000 		.4byte	0x8c
+ 1003 01be C9010000 		.4byte	0x1c9
+ 1004 01c2 0B       		.uleb128 0xb
+ 1005 01c3 C9000000 		.4byte	0xc9
+ 1006 01c7 02       		.byte	0x2
+ 1007 01c8 00       		.byte	0
+ 1008 01c9 05       		.uleb128 0x5
+ 1009 01ca 32000000 		.4byte	.LASF34
+ 1010 01ce 01       		.byte	0x1
+ 1011 01cf A7       		.byte	0xa7
+ 1012 01d0 97000000 		.4byte	0x97
+ 1013 01d4 00000000 		.4byte	.LFB37
+ 1014 01d8 EC000000 		.4byte	.LFE37-.LFB37
+ 1015 01dc 01       		.uleb128 0x1
+ 1016 01dd 9C       		.byte	0x9c
+ 1017 01de 45020000 		.4byte	0x245
+ 1018 01e2 0C       		.uleb128 0xc
+ 1019 01e3 AF010000 		.4byte	.LASF35
+ 1020 01e7 01       		.byte	0x1
+ 1021 01e8 A7       		.byte	0xa7
+ 1022 01e9 8C000000 		.4byte	0x8c
+ 1023 01ed 02       		.uleb128 0x2
+ 1024 01ee 91       		.byte	0x91
+ 1025 01ef 67       		.sleb128 -25
+ 1026 01f0 06       		.uleb128 0x6
+ 1027 01f1 61636B00 		.ascii	"ack\000"
+ 1028 01f5 01       		.byte	0x1
+ 1029 01f6 A8       		.byte	0xa8
+ 1030 01f7 97000000 		.4byte	0x97
+ 1031 01fb 02       		.uleb128 0x2
+ 1032 01fc 91       		.byte	0x91
+ 1033 01fd 74       		.sleb128 -12
+ 1034 01fe 09       		.uleb128 0x9
+ 1035 01ff 42000000 		.4byte	.LASF24
+ 1036 0203 01       		.byte	0x1
+ 1037 0204 A8       		.byte	0xa8
+ 1038 0205 97000000 		.4byte	0x97
+ 1039 0209 02       		.uleb128 0x2
+ 1040 020a 91       		.byte	0x91
+ 1041 020b 72       		.sleb128 -14
+ 1042 020c 09       		.uleb128 0x9
+ 1043 020d F0010000 		.4byte	.LASF21
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 24
+
+
+ 1044 0211 01       		.byte	0x1
+ 1045 0212 A8       		.byte	0xa8
+ 1046 0213 97000000 		.4byte	0x97
+ 1047 0217 02       		.uleb128 0x2
+ 1048 0218 91       		.byte	0x91
+ 1049 0219 70       		.sleb128 -16
+ 1050 021a 09       		.uleb128 0x9
+ 1051 021b 25020000 		.4byte	.LASF28
+ 1052 021f 01       		.byte	0x1
+ 1053 0220 A8       		.byte	0xa8
+ 1054 0221 97000000 		.4byte	0x97
+ 1055 0225 02       		.uleb128 0x2
+ 1056 0226 91       		.byte	0x91
+ 1057 0227 6E       		.sleb128 -18
+ 1058 0228 09       		.uleb128 0x9
+ 1059 0229 1C020000 		.4byte	.LASF29
+ 1060 022d 01       		.byte	0x1
+ 1061 022e A8       		.byte	0xa8
+ 1062 022f 97000000 		.4byte	0x97
+ 1063 0233 02       		.uleb128 0x2
+ 1064 0234 91       		.byte	0x91
+ 1065 0235 6C       		.sleb128 -20
+ 1066 0236 09       		.uleb128 0x9
+ 1067 0237 20010000 		.4byte	.LASF31
+ 1068 023b 01       		.byte	0x1
+ 1069 023c A9       		.byte	0xa9
+ 1070 023d 97000000 		.4byte	0x97
+ 1071 0241 02       		.uleb128 0x2
+ 1072 0242 91       		.byte	0x91
+ 1073 0243 76       		.sleb128 -10
+ 1074 0244 00       		.byte	0
+ 1075 0245 0D       		.uleb128 0xd
+ 1076 0246 9C020000 		.4byte	.LASF42
+ 1077 024a 01       		.byte	0x1
+ 1078 024b C4       		.byte	0xc4
+ 1079 024c 00000000 		.4byte	.LFB38
+ 1080 0250 9E000000 		.4byte	.LFE38-.LFB38
+ 1081 0254 01       		.uleb128 0x1
+ 1082 0255 9C       		.byte	0x9c
+ 1083 0256 93020000 		.4byte	0x293
+ 1084 025a 0C       		.uleb128 0xc
+ 1085 025b AF010000 		.4byte	.LASF35
+ 1086 025f 01       		.byte	0x1
+ 1087 0260 C4       		.byte	0xc4
+ 1088 0261 8C000000 		.4byte	0x8c
+ 1089 0265 02       		.uleb128 0x2
+ 1090 0266 91       		.byte	0x91
+ 1091 0267 6F       		.sleb128 -17
+ 1092 0268 0C       		.uleb128 0xc
+ 1093 0269 4A020000 		.4byte	.LASF22
+ 1094 026d 01       		.byte	0x1
+ 1095 026e C4       		.byte	0xc4
+ 1096 026f 8C000000 		.4byte	0x8c
+ 1097 0273 02       		.uleb128 0x2
+ 1098 0274 91       		.byte	0x91
+ 1099 0275 6E       		.sleb128 -18
+ 1100 0276 0C       		.uleb128 0xc
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 25
+
+
+ 1101 0277 E2010000 		.4byte	.LASF23
+ 1102 027b 01       		.byte	0x1
+ 1103 027c C4       		.byte	0xc4
+ 1104 027d 8C000000 		.4byte	0x8c
+ 1105 0281 02       		.uleb128 0x2
+ 1106 0282 91       		.byte	0x91
+ 1107 0283 6D       		.sleb128 -19
+ 1108 0284 0C       		.uleb128 0xc
+ 1109 0285 42000000 		.4byte	.LASF24
+ 1110 0289 01       		.byte	0x1
+ 1111 028a C4       		.byte	0xc4
+ 1112 028b 8C000000 		.4byte	0x8c
+ 1113 028f 02       		.uleb128 0x2
+ 1114 0290 91       		.byte	0x91
+ 1115 0291 6C       		.sleb128 -20
+ 1116 0292 00       		.byte	0
+ 1117 0293 05       		.uleb128 0x5
+ 1118 0294 28000000 		.4byte	.LASF36
+ 1119 0298 01       		.byte	0x1
+ 1120 0299 D6       		.byte	0xd6
+ 1121 029a 97000000 		.4byte	0x97
+ 1122 029e 00000000 		.4byte	.LFB39
+ 1123 02a2 04010000 		.4byte	.LFE39-.LFB39
+ 1124 02a6 01       		.uleb128 0x1
+ 1125 02a7 9C       		.byte	0x9c
+ 1126 02a8 2B030000 		.4byte	0x32b
+ 1127 02ac 0C       		.uleb128 0xc
+ 1128 02ad AF010000 		.4byte	.LASF35
+ 1129 02b1 01       		.byte	0x1
+ 1130 02b2 D6       		.byte	0xd6
+ 1131 02b3 8C000000 		.4byte	0x8c
+ 1132 02b7 02       		.uleb128 0x2
+ 1133 02b8 91       		.byte	0x91
+ 1134 02b9 5F       		.sleb128 -33
+ 1135 02ba 06       		.uleb128 0x6
+ 1136 02bb 61636B00 		.ascii	"ack\000"
+ 1137 02bf 01       		.byte	0x1
+ 1138 02c0 D7       		.byte	0xd7
+ 1139 02c1 97000000 		.4byte	0x97
+ 1140 02c5 02       		.uleb128 0x2
+ 1141 02c6 91       		.byte	0x91
+ 1142 02c7 74       		.sleb128 -12
+ 1143 02c8 09       		.uleb128 0x9
+ 1144 02c9 42000000 		.4byte	.LASF24
+ 1145 02cd 01       		.byte	0x1
+ 1146 02ce D7       		.byte	0xd7
+ 1147 02cf 97000000 		.4byte	0x97
+ 1148 02d3 02       		.uleb128 0x2
+ 1149 02d4 91       		.byte	0x91
+ 1150 02d5 72       		.sleb128 -14
+ 1151 02d6 09       		.uleb128 0x9
+ 1152 02d7 F0010000 		.4byte	.LASF21
+ 1153 02db 01       		.byte	0x1
+ 1154 02dc D7       		.byte	0xd7
+ 1155 02dd 97000000 		.4byte	0x97
+ 1156 02e1 02       		.uleb128 0x2
+ 1157 02e2 91       		.byte	0x91
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 26
+
+
+ 1158 02e3 70       		.sleb128 -16
+ 1159 02e4 09       		.uleb128 0x9
+ 1160 02e5 25020000 		.4byte	.LASF28
+ 1161 02e9 01       		.byte	0x1
+ 1162 02ea D7       		.byte	0xd7
+ 1163 02eb 97000000 		.4byte	0x97
+ 1164 02ef 02       		.uleb128 0x2
+ 1165 02f0 91       		.byte	0x91
+ 1166 02f1 6E       		.sleb128 -18
+ 1167 02f2 09       		.uleb128 0x9
+ 1168 02f3 1C020000 		.4byte	.LASF29
+ 1169 02f7 01       		.byte	0x1
+ 1170 02f8 D7       		.byte	0xd7
+ 1171 02f9 97000000 		.4byte	0x97
+ 1172 02fd 02       		.uleb128 0x2
+ 1173 02fe 91       		.byte	0x91
+ 1174 02ff 6C       		.sleb128 -20
+ 1175 0300 09       		.uleb128 0x9
+ 1176 0301 37020000 		.4byte	.LASF37
+ 1177 0305 01       		.byte	0x1
+ 1178 0306 D8       		.byte	0xd8
+ 1179 0307 A2000000 		.4byte	0xa2
+ 1180 030b 02       		.uleb128 0x2
+ 1181 030c 91       		.byte	0x91
+ 1182 030d 68       		.sleb128 -24
+ 1183 030e 09       		.uleb128 0x9
+ 1184 030f 2E020000 		.4byte	.LASF38
+ 1185 0313 01       		.byte	0x1
+ 1186 0314 D8       		.byte	0xd8
+ 1187 0315 A2000000 		.4byte	0xa2
+ 1188 0319 02       		.uleb128 0x2
+ 1189 031a 91       		.byte	0x91
+ 1190 031b 64       		.sleb128 -28
+ 1191 031c 09       		.uleb128 0x9
+ 1192 031d DD010000 		.4byte	.LASF32
+ 1193 0321 01       		.byte	0x1
+ 1194 0322 D9       		.byte	0xd9
+ 1195 0323 97000000 		.4byte	0x97
+ 1196 0327 02       		.uleb128 0x2
+ 1197 0328 91       		.byte	0x91
+ 1198 0329 76       		.sleb128 -10
+ 1199 032a 00       		.byte	0
+ 1200 032b 0E       		.uleb128 0xe
+ 1201 032c 62020000 		.4byte	.LASF43
+ 1202 0330 01       		.byte	0x1
+ 1203 0331 F6       		.byte	0xf6
+ 1204 0332 00000000 		.4byte	.LFB40
+ 1205 0336 9E000000 		.4byte	.LFE40-.LFB40
+ 1206 033a 01       		.uleb128 0x1
+ 1207 033b 9C       		.byte	0x9c
+ 1208 033c 0C       		.uleb128 0xc
+ 1209 033d AF010000 		.4byte	.LASF35
+ 1210 0341 01       		.byte	0x1
+ 1211 0342 F6       		.byte	0xf6
+ 1212 0343 8C000000 		.4byte	0x8c
+ 1213 0347 02       		.uleb128 0x2
+ 1214 0348 91       		.byte	0x91
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 27
+
+
+ 1215 0349 6F       		.sleb128 -17
+ 1216 034a 0C       		.uleb128 0xc
+ 1217 034b 4A020000 		.4byte	.LASF22
+ 1218 034f 01       		.byte	0x1
+ 1219 0350 F6       		.byte	0xf6
+ 1220 0351 8C000000 		.4byte	0x8c
+ 1221 0355 02       		.uleb128 0x2
+ 1222 0356 91       		.byte	0x91
+ 1223 0357 6E       		.sleb128 -18
+ 1224 0358 0C       		.uleb128 0xc
+ 1225 0359 E2010000 		.4byte	.LASF23
+ 1226 035d 01       		.byte	0x1
+ 1227 035e F6       		.byte	0xf6
+ 1228 035f 8C000000 		.4byte	0x8c
+ 1229 0363 02       		.uleb128 0x2
+ 1230 0364 91       		.byte	0x91
+ 1231 0365 6D       		.sleb128 -19
+ 1232 0366 0C       		.uleb128 0xc
+ 1233 0367 42000000 		.4byte	.LASF24
+ 1234 036b 01       		.byte	0x1
+ 1235 036c F6       		.byte	0xf6
+ 1236 036d 8C000000 		.4byte	0x8c
+ 1237 0371 02       		.uleb128 0x2
+ 1238 0372 91       		.byte	0x91
+ 1239 0373 6C       		.sleb128 -20
+ 1240 0374 00       		.byte	0
+ 1241 0375 00       		.byte	0
+ 1242              		.section	.debug_abbrev,"",%progbits
+ 1243              	.Ldebug_abbrev0:
+ 1244 0000 01       		.uleb128 0x1
+ 1245 0001 11       		.uleb128 0x11
+ 1246 0002 01       		.byte	0x1
+ 1247 0003 25       		.uleb128 0x25
+ 1248 0004 0E       		.uleb128 0xe
+ 1249 0005 13       		.uleb128 0x13
+ 1250 0006 0B       		.uleb128 0xb
+ 1251 0007 03       		.uleb128 0x3
+ 1252 0008 0E       		.uleb128 0xe
+ 1253 0009 1B       		.uleb128 0x1b
+ 1254 000a 0E       		.uleb128 0xe
+ 1255 000b 55       		.uleb128 0x55
+ 1256 000c 17       		.uleb128 0x17
+ 1257 000d 11       		.uleb128 0x11
+ 1258 000e 01       		.uleb128 0x1
+ 1259 000f 10       		.uleb128 0x10
+ 1260 0010 17       		.uleb128 0x17
+ 1261 0011 00       		.byte	0
+ 1262 0012 00       		.byte	0
+ 1263 0013 02       		.uleb128 0x2
+ 1264 0014 24       		.uleb128 0x24
+ 1265 0015 00       		.byte	0
+ 1266 0016 0B       		.uleb128 0xb
+ 1267 0017 0B       		.uleb128 0xb
+ 1268 0018 3E       		.uleb128 0x3e
+ 1269 0019 0B       		.uleb128 0xb
+ 1270 001a 03       		.uleb128 0x3
+ 1271 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 28
+
+
+ 1272 001c 00       		.byte	0
+ 1273 001d 00       		.byte	0
+ 1274 001e 03       		.uleb128 0x3
+ 1275 001f 16       		.uleb128 0x16
+ 1276 0020 00       		.byte	0
+ 1277 0021 03       		.uleb128 0x3
+ 1278 0022 0E       		.uleb128 0xe
+ 1279 0023 3A       		.uleb128 0x3a
+ 1280 0024 0B       		.uleb128 0xb
+ 1281 0025 3B       		.uleb128 0x3b
+ 1282 0026 0B       		.uleb128 0xb
+ 1283 0027 49       		.uleb128 0x49
+ 1284 0028 13       		.uleb128 0x13
+ 1285 0029 00       		.byte	0
+ 1286 002a 00       		.byte	0
+ 1287 002b 04       		.uleb128 0x4
+ 1288 002c 24       		.uleb128 0x24
+ 1289 002d 00       		.byte	0
+ 1290 002e 0B       		.uleb128 0xb
+ 1291 002f 0B       		.uleb128 0xb
+ 1292 0030 3E       		.uleb128 0x3e
+ 1293 0031 0B       		.uleb128 0xb
+ 1294 0032 03       		.uleb128 0x3
+ 1295 0033 08       		.uleb128 0x8
+ 1296 0034 00       		.byte	0
+ 1297 0035 00       		.byte	0
+ 1298 0036 05       		.uleb128 0x5
+ 1299 0037 2E       		.uleb128 0x2e
+ 1300 0038 01       		.byte	0x1
+ 1301 0039 3F       		.uleb128 0x3f
+ 1302 003a 19       		.uleb128 0x19
+ 1303 003b 03       		.uleb128 0x3
+ 1304 003c 0E       		.uleb128 0xe
+ 1305 003d 3A       		.uleb128 0x3a
+ 1306 003e 0B       		.uleb128 0xb
+ 1307 003f 3B       		.uleb128 0x3b
+ 1308 0040 0B       		.uleb128 0xb
+ 1309 0041 27       		.uleb128 0x27
+ 1310 0042 19       		.uleb128 0x19
+ 1311 0043 49       		.uleb128 0x49
+ 1312 0044 13       		.uleb128 0x13
+ 1313 0045 11       		.uleb128 0x11
+ 1314 0046 01       		.uleb128 0x1
+ 1315 0047 12       		.uleb128 0x12
+ 1316 0048 06       		.uleb128 0x6
+ 1317 0049 40       		.uleb128 0x40
+ 1318 004a 18       		.uleb128 0x18
+ 1319 004b 9642     		.uleb128 0x2116
+ 1320 004d 19       		.uleb128 0x19
+ 1321 004e 01       		.uleb128 0x1
+ 1322 004f 13       		.uleb128 0x13
+ 1323 0050 00       		.byte	0
+ 1324 0051 00       		.byte	0
+ 1325 0052 06       		.uleb128 0x6
+ 1326 0053 34       		.uleb128 0x34
+ 1327 0054 00       		.byte	0
+ 1328 0055 03       		.uleb128 0x3
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 29
+
+
+ 1329 0056 08       		.uleb128 0x8
+ 1330 0057 3A       		.uleb128 0x3a
+ 1331 0058 0B       		.uleb128 0xb
+ 1332 0059 3B       		.uleb128 0x3b
+ 1333 005a 0B       		.uleb128 0xb
+ 1334 005b 49       		.uleb128 0x49
+ 1335 005c 13       		.uleb128 0x13
+ 1336 005d 02       		.uleb128 0x2
+ 1337 005e 18       		.uleb128 0x18
+ 1338 005f 00       		.byte	0
+ 1339 0060 00       		.byte	0
+ 1340 0061 07       		.uleb128 0x7
+ 1341 0062 34       		.uleb128 0x34
+ 1342 0063 00       		.byte	0
+ 1343 0064 03       		.uleb128 0x3
+ 1344 0065 0E       		.uleb128 0xe
+ 1345 0066 3A       		.uleb128 0x3a
+ 1346 0067 0B       		.uleb128 0xb
+ 1347 0068 3B       		.uleb128 0x3b
+ 1348 0069 0B       		.uleb128 0xb
+ 1349 006a 49       		.uleb128 0x49
+ 1350 006b 13       		.uleb128 0x13
+ 1351 006c 00       		.byte	0
+ 1352 006d 00       		.byte	0
+ 1353 006e 08       		.uleb128 0x8
+ 1354 006f 34       		.uleb128 0x34
+ 1355 0070 00       		.byte	0
+ 1356 0071 03       		.uleb128 0x3
+ 1357 0072 08       		.uleb128 0x8
+ 1358 0073 3A       		.uleb128 0x3a
+ 1359 0074 0B       		.uleb128 0xb
+ 1360 0075 3B       		.uleb128 0x3b
+ 1361 0076 0B       		.uleb128 0xb
+ 1362 0077 49       		.uleb128 0x49
+ 1363 0078 13       		.uleb128 0x13
+ 1364 0079 00       		.byte	0
+ 1365 007a 00       		.byte	0
+ 1366 007b 09       		.uleb128 0x9
+ 1367 007c 34       		.uleb128 0x34
+ 1368 007d 00       		.byte	0
+ 1369 007e 03       		.uleb128 0x3
+ 1370 007f 0E       		.uleb128 0xe
+ 1371 0080 3A       		.uleb128 0x3a
+ 1372 0081 0B       		.uleb128 0xb
+ 1373 0082 3B       		.uleb128 0x3b
+ 1374 0083 0B       		.uleb128 0xb
+ 1375 0084 49       		.uleb128 0x49
+ 1376 0085 13       		.uleb128 0x13
+ 1377 0086 02       		.uleb128 0x2
+ 1378 0087 18       		.uleb128 0x18
+ 1379 0088 00       		.byte	0
+ 1380 0089 00       		.byte	0
+ 1381 008a 0A       		.uleb128 0xa
+ 1382 008b 01       		.uleb128 0x1
+ 1383 008c 01       		.byte	0x1
+ 1384 008d 49       		.uleb128 0x49
+ 1385 008e 13       		.uleb128 0x13
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 30
+
+
+ 1386 008f 01       		.uleb128 0x1
+ 1387 0090 13       		.uleb128 0x13
+ 1388 0091 00       		.byte	0
+ 1389 0092 00       		.byte	0
+ 1390 0093 0B       		.uleb128 0xb
+ 1391 0094 21       		.uleb128 0x21
+ 1392 0095 00       		.byte	0
+ 1393 0096 49       		.uleb128 0x49
+ 1394 0097 13       		.uleb128 0x13
+ 1395 0098 2F       		.uleb128 0x2f
+ 1396 0099 0B       		.uleb128 0xb
+ 1397 009a 00       		.byte	0
+ 1398 009b 00       		.byte	0
+ 1399 009c 0C       		.uleb128 0xc
+ 1400 009d 05       		.uleb128 0x5
+ 1401 009e 00       		.byte	0
+ 1402 009f 03       		.uleb128 0x3
+ 1403 00a0 0E       		.uleb128 0xe
+ 1404 00a1 3A       		.uleb128 0x3a
+ 1405 00a2 0B       		.uleb128 0xb
+ 1406 00a3 3B       		.uleb128 0x3b
+ 1407 00a4 0B       		.uleb128 0xb
+ 1408 00a5 49       		.uleb128 0x49
+ 1409 00a6 13       		.uleb128 0x13
+ 1410 00a7 02       		.uleb128 0x2
+ 1411 00a8 18       		.uleb128 0x18
+ 1412 00a9 00       		.byte	0
+ 1413 00aa 00       		.byte	0
+ 1414 00ab 0D       		.uleb128 0xd
+ 1415 00ac 2E       		.uleb128 0x2e
+ 1416 00ad 01       		.byte	0x1
+ 1417 00ae 3F       		.uleb128 0x3f
+ 1418 00af 19       		.uleb128 0x19
+ 1419 00b0 03       		.uleb128 0x3
+ 1420 00b1 0E       		.uleb128 0xe
+ 1421 00b2 3A       		.uleb128 0x3a
+ 1422 00b3 0B       		.uleb128 0xb
+ 1423 00b4 3B       		.uleb128 0x3b
+ 1424 00b5 0B       		.uleb128 0xb
+ 1425 00b6 27       		.uleb128 0x27
+ 1426 00b7 19       		.uleb128 0x19
+ 1427 00b8 11       		.uleb128 0x11
+ 1428 00b9 01       		.uleb128 0x1
+ 1429 00ba 12       		.uleb128 0x12
+ 1430 00bb 06       		.uleb128 0x6
+ 1431 00bc 40       		.uleb128 0x40
+ 1432 00bd 18       		.uleb128 0x18
+ 1433 00be 9642     		.uleb128 0x2116
+ 1434 00c0 19       		.uleb128 0x19
+ 1435 00c1 01       		.uleb128 0x1
+ 1436 00c2 13       		.uleb128 0x13
+ 1437 00c3 00       		.byte	0
+ 1438 00c4 00       		.byte	0
+ 1439 00c5 0E       		.uleb128 0xe
+ 1440 00c6 2E       		.uleb128 0x2e
+ 1441 00c7 01       		.byte	0x1
+ 1442 00c8 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 31
+
+
+ 1443 00c9 19       		.uleb128 0x19
+ 1444 00ca 03       		.uleb128 0x3
+ 1445 00cb 0E       		.uleb128 0xe
+ 1446 00cc 3A       		.uleb128 0x3a
+ 1447 00cd 0B       		.uleb128 0xb
+ 1448 00ce 3B       		.uleb128 0x3b
+ 1449 00cf 0B       		.uleb128 0xb
+ 1450 00d0 27       		.uleb128 0x27
+ 1451 00d1 19       		.uleb128 0x19
+ 1452 00d2 11       		.uleb128 0x11
+ 1453 00d3 01       		.uleb128 0x1
+ 1454 00d4 12       		.uleb128 0x12
+ 1455 00d5 06       		.uleb128 0x6
+ 1456 00d6 40       		.uleb128 0x40
+ 1457 00d7 18       		.uleb128 0x18
+ 1458 00d8 9642     		.uleb128 0x2116
+ 1459 00da 19       		.uleb128 0x19
+ 1460 00db 00       		.byte	0
+ 1461 00dc 00       		.byte	0
+ 1462 00dd 00       		.byte	0
+ 1463              		.section	.debug_aranges,"",%progbits
+ 1464 0000 3C000000 		.4byte	0x3c
+ 1465 0004 0200     		.2byte	0x2
+ 1466 0006 00000000 		.4byte	.Ldebug_info0
+ 1467 000a 04       		.byte	0x4
+ 1468 000b 00       		.byte	0
+ 1469 000c 0000     		.2byte	0
+ 1470 000e 0000     		.2byte	0
+ 1471 0010 00000000 		.4byte	.LFB36
+ 1472 0014 A0010000 		.4byte	.LFE36-.LFB36
+ 1473 0018 00000000 		.4byte	.LFB37
+ 1474 001c EC000000 		.4byte	.LFE37-.LFB37
+ 1475 0020 00000000 		.4byte	.LFB38
+ 1476 0024 9E000000 		.4byte	.LFE38-.LFB38
+ 1477 0028 00000000 		.4byte	.LFB39
+ 1478 002c 04010000 		.4byte	.LFE39-.LFB39
+ 1479 0030 00000000 		.4byte	.LFB40
+ 1480 0034 9E000000 		.4byte	.LFE40-.LFB40
+ 1481 0038 00000000 		.4byte	0
+ 1482 003c 00000000 		.4byte	0
+ 1483              		.section	.debug_ranges,"",%progbits
+ 1484              	.Ldebug_ranges0:
+ 1485 0000 00000000 		.4byte	.LFB36
+ 1486 0004 A0010000 		.4byte	.LFE36
+ 1487 0008 00000000 		.4byte	.LFB37
+ 1488 000c EC000000 		.4byte	.LFE37
+ 1489 0010 00000000 		.4byte	.LFB38
+ 1490 0014 9E000000 		.4byte	.LFE38
+ 1491 0018 00000000 		.4byte	.LFB39
+ 1492 001c 04010000 		.4byte	.LFE39
+ 1493 0020 00000000 		.4byte	.LFB40
+ 1494 0024 9E000000 		.4byte	.LFE40
+ 1495 0028 00000000 		.4byte	0
+ 1496 002c 00000000 		.4byte	0
+ 1497              		.section	.debug_line,"",%progbits
+ 1498              	.Ldebug_line0:
+ 1499 0000 E6010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 32
+
+
+ 1499      02001A01 
+ 1499      00000201 
+ 1499      FB0E0D00 
+ 1499      01010101 
+ 1500              	.LASF3:
+ 1501 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1501      6E74385F 
+ 1501      7400
+ 1502              	.LASF27:
+ 1503 000a 49474149 		.ascii	"IGAIN_checksum\000"
+ 1503      4E5F6368 
+ 1503      65636B73 
+ 1503      756D00
+ 1504              	.LASF26:
+ 1505 0019 56474149 		.ascii	"VGAIN_checksum\000"
+ 1505      4E5F6368 
+ 1505      65636B73 
+ 1505      756D00
+ 1506              	.LASF36:
+ 1507 0028 49524D53 		.ascii	"IRMS_Read\000"
+ 1507      5F526561 
+ 1507      6400
+ 1508              	.LASF34:
+ 1509 0032 56524D53 		.ascii	"VRMS_Read\000"
+ 1509      5F526561 
+ 1509      6400
+ 1510              	.LASF15:
+ 1511 003c 666C6F61 		.ascii	"float\000"
+ 1511      7400
+ 1512              	.LASF24:
+ 1513 0042 63686563 		.ascii	"checksum\000"
+ 1513      6B73756D 
+ 1513      00
+ 1514              	.LASF1:
+ 1515 004b 756E7369 		.ascii	"unsigned char\000"
+ 1515      676E6564 
+ 1515      20636861 
+ 1515      7200
+ 1516              	.LASF30:
+ 1517 0059 706F7765 		.ascii	"powerAddresses\000"
+ 1517      72416464 
+ 1517      72657373 
+ 1517      657300
+ 1518              	.LASF8:
+ 1519 0068 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1519      20756E73 
+ 1519      69676E65 
+ 1519      6420696E 
+ 1519      7400
+ 1520              	.LASF5:
+ 1521 007a 73686F72 		.ascii	"short unsigned int\000"
+ 1521      7420756E 
+ 1521      7369676E 
+ 1521      65642069 
+ 1521      6E7400
+ 1522              	.LASF39:
+ 1523 008d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 33
+
+
+ 1523      43313120 
+ 1523      352E342E 
+ 1523      31203230 
+ 1523      31363036 
+ 1524 00c0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1524      20726576 
+ 1524      6973696F 
+ 1524      6E203233 
+ 1524      37373135 
+ 1525 00f3 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1525      66756E63 
+ 1525      74696F6E 
+ 1525      2D736563 
+ 1525      74696F6E 
+ 1526              	.LASF25:
+ 1527 011b 4761696E 		.ascii	"Gain\000"
+ 1527      00
+ 1528              	.LASF31:
+ 1529 0120 56524D53 		.ascii	"VRMS\000"
+ 1529      00
+ 1530              	.LASF4:
+ 1531 0125 5F5F7569 		.ascii	"__uint16_t\000"
+ 1531      6E743136 
+ 1531      5F7400
+ 1532              	.LASF16:
+ 1533 0130 646F7562 		.ascii	"double\000"
+ 1533      6C6500
+ 1534              	.LASF7:
+ 1535 0137 5F5F7569 		.ascii	"__uint32_t\000"
+ 1535      6E743332 
+ 1535      5F7400
+ 1536              	.LASF41:
+ 1537 0142 433A5C55 		.ascii	"C:\\Users\\K-Narf\\Documents\\Senior Design Code Te"
+ 1537      73657273 
+ 1537      5C4B2D4E 
+ 1537      6172665C 
+ 1537      446F6375 
+ 1538 0171 7374696E 		.ascii	"sting\\Power_Chip_Test\\Power_Chip_Test.cydsn\000"
+ 1538      675C506F 
+ 1538      7765725F 
+ 1538      43686970 
+ 1538      5F546573 
+ 1539              	.LASF33:
+ 1540 019d 6D61696E 		.ascii	"main\000"
+ 1540      00
+ 1541              	.LASF11:
+ 1542 01a2 756E7369 		.ascii	"unsigned int\000"
+ 1542      676E6564 
+ 1542      20696E74 
+ 1542      00
+ 1543              	.LASF35:
+ 1544 01af 61646472 		.ascii	"address\000"
+ 1544      65737300 
+ 1545              	.LASF10:
+ 1546 01b7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1546      206C6F6E 
+ 1546      6720756E 
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 34
+
+
+ 1546      7369676E 
+ 1546      65642069 
+ 1547              	.LASF12:
+ 1548 01ce 75696E74 		.ascii	"uint8_t\000"
+ 1548      385F7400 
+ 1549              	.LASF20:
+ 1550 01d6 72657375 		.ascii	"result\000"
+ 1550      6C7400
+ 1551              	.LASF32:
+ 1552 01dd 49524D53 		.ascii	"IRMS\000"
+ 1552      00
+ 1553              	.LASF23:
+ 1554 01e2 53656E64 		.ascii	"Send_Low_Byte\000"
+ 1554      5F4C6F77 
+ 1554      5F427974 
+ 1554      6500
+ 1555              	.LASF21:
+ 1556 01f0 6E756D42 		.ascii	"numBytes\000"
+ 1556      79746573 
+ 1556      00
+ 1557              	.LASF19:
+ 1558 01f9 73697A65 		.ascii	"sizetype\000"
+ 1558      74797065 
+ 1558      00
+ 1559              	.LASF9:
+ 1560 0202 6C6F6E67 		.ascii	"long long int\000"
+ 1560      206C6F6E 
+ 1560      6720696E 
+ 1560      7400
+ 1561              	.LASF40:
+ 1562 0210 6D61696E 		.ascii	"main.c\000"
+ 1562      2E6300
+ 1563              	.LASF17:
+ 1564 0217 63686172 		.ascii	"char\000"
+ 1564      00
+ 1565              	.LASF29:
+ 1566 021c 72657362 		.ascii	"resbyte1\000"
+ 1566      79746531 
+ 1566      00
+ 1567              	.LASF28:
+ 1568 0225 72657362 		.ascii	"resbyte2\000"
+ 1568      79746532 
+ 1568      00
+ 1569              	.LASF38:
+ 1570 022e 72657362 		.ascii	"resbyte3\000"
+ 1570      79746533 
+ 1570      00
+ 1571              	.LASF37:
+ 1572 0237 72657362 		.ascii	"resbyte4\000"
+ 1572      79746534 
+ 1572      00
+ 1573              	.LASF2:
+ 1574 0240 73686F72 		.ascii	"short int\000"
+ 1574      7420696E 
+ 1574      7400
+ 1575              	.LASF22:
+ 1576 024a 53656E64 		.ascii	"Send_High_Byte\000"
+ARM GAS  C:\Users\K-Narf\AppData\Local\Temp\ccKEafTp.s 			page 35
+
+
+ 1576      5F486967 
+ 1576      685F4279 
+ 1576      746500
+ 1577              	.LASF13:
+ 1578 0259 75696E74 		.ascii	"uint16_t\000"
+ 1578      31365F74 
+ 1578      00
+ 1579              	.LASF43:
+ 1580 0262 49524D53 		.ascii	"IRMS_Gain_Write\000"
+ 1580      5F476169 
+ 1580      6E5F5772 
+ 1580      69746500 
+ 1581              	.LASF14:
+ 1582 0272 75696E74 		.ascii	"uint32_t\000"
+ 1582      33325F74 
+ 1582      00
+ 1583              	.LASF6:
+ 1584 027b 6C6F6E67 		.ascii	"long int\000"
+ 1584      20696E74 
+ 1584      00
+ 1585              	.LASF18:
+ 1586 0284 6C6F6E67 		.ascii	"long double\000"
+ 1586      20646F75 
+ 1586      626C6500 
+ 1587              	.LASF0:
+ 1588 0290 7369676E 		.ascii	"signed char\000"
+ 1588      65642063 
+ 1588      68617200 
+ 1589              	.LASF42:
+ 1590 029c 56524D53 		.ascii	"VRMS_Gain_Write\000"
+ 1590      5F476169 
+ 1590      6E5F5772 
+ 1590      69746500 
+ 1591              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

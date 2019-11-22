@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9ce841ab-934a-4335-969e-e221b3f980a6
+C:\Users\K-Narf\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|271191b8-607f-4137-ae43-40a44efdad65
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ac645fd5-d3a1-4f16-b772-ace3b10d0734
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d3ceed96-5745-48d5-b1a7-33d731b0e103
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c6d680e4-0bd5-4d6f-85af-42616208c530
+C:\Users\K-Narf\Documents\Senior Design Code Testing\Power_Chip_Test\Power_Chip_Test.cydsn\Power_Chip_Test.cyprj|ed157a1e-54e0-4467-8e6c-57ae43a6f4d3

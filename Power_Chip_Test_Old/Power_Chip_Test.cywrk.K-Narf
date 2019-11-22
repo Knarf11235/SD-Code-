@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Power_Chip_Test\Power_Chip_Test\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\TopDesign</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Pins</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Analog</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Clocks</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Interrupts</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\System</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Directives</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Flash Security</v>
+<v>Power_Chip_Test\Power_Chip_Test\Header Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\Header Files\cyapicallbacks.h</v>
+<v>Power_Chip_Test\Power_Chip_Test\Source Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\Source Files\main.c</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\TopDesign</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Pins</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Analog</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Clocks</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Interrupts</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\System</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Directives</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Flash Security</v>
+<v>Power_Chip_Test\Power_Chip_Test\Header Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\Header Files\cyapicallbacks.h</v>
+<v>Power_Chip_Test\Power_Chip_Test\Source Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\Source Files\main.c</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\BLUE</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\COMP_CB</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\COMP_Relay</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cy_boot</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\GREEN</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\HF_CB</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\HF_Relay</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_SCB_IRQ</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_SCBCLK</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_scl</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_sda</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\LF_CB</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\LF_Relay</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\MyUART_1</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\RED</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\VR_EN</v>
+<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Power_Chip_Test</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Power_Chip_Test</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_CB.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_CB_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_BOOT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_INT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_MASTER.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCB_IRQ.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCBCLK.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_scl.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_scl_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_sda.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_sda_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\LF_CB.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\LF_CB_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\LF_Relay.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\LF_Relay_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\MyUART_1.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\MyUART_1_AsmGnu.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\RED.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\RED_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\VR_EN.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\VR_EN_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Power_Chip_Test.elf</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Power_Chip_Test.hex</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Power_Chip_Test.map</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.gpdsc</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.rpt</v>
+<v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\BLUE_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_CB.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_CB_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_BOOT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_INT.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_MASTER.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCB_IRQ.lst</v>
+<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCBCLK.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\PSoC 4 Architecture TRM</v>
+<v>Power_Chip_Test\Power_Chip_Test\PRoC BLE Family Datasheet</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides\cy_boot_v5_70</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Power_Chip_Test\Power_Chip_Test\cy_pins_v2_20</v>
+<v>Power_Chip_Test\Power_Chip_Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Power_Chip_Test\Power_Chip_Test\SCB_P4_v4_0.pdf</v>
+<v>Power_Chip_Test\Power_Chip_Test\SW_Tx_UART_v1_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test</v>
+<v>Power_Chip_Test\Power_Chip_Test\PSoC 4 Architecture TRM</v>
+<v>Power_Chip_Test\Power_Chip_Test\PRoC BLE Family Datasheet</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides\cy_boot_v5_70</v>
+<v>Power_Chip_Test\Power_Chip_Test\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Power_Chip_Test\Power_Chip_Test\cy_pins_v2_20</v>
+<v>Power_Chip_Test\Power_Chip_Test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Power_Chip_Test\Power_Chip_Test\SCB_P4_v4_0.pdf</v>
+<v>Power_Chip_Test\Power_Chip_Test\SW_Tx_UART_v1_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

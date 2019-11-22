@@ -1,6 +1,6 @@
 // ======================================================================
 // Power_Chip_Test.v generated from TopDesign.cysch
-// 11/17/2019 at 14:55
+// 11/17/2019 at 19:43
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -677,7 +677,7 @@ module top ;
 		#(.id("1a6ccd03-574d-43ed-a909-2aaceb621304"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
+		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -752,7 +752,7 @@ module top ;
 		#(.id("9d859e35-131c-42eb-95ef-ceb85d387a15"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
+		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -827,7 +827,7 @@ module top ;
 		#(.id("b99fbfca-9370-433d-9143-d0d46c7ddac0"),
 		  .drive_mode(3'b110),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b1),
+		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),

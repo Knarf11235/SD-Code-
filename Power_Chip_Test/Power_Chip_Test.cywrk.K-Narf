@@ -47,30 +47,6 @@
 <v>Power_Chip_Test\Power_Chip_Test\Power_Chip_Test.cydwr\Flash Security</v>
 <v>Power_Chip_Test\Power_Chip_Test\Header Files</v>
 <v>Power_Chip_Test\Power_Chip_Test\Header Files\cyapicallbacks.h</v>
-<v>Power_Chip_Test\Power_Chip_Test\Source Files</v>
-<v>Power_Chip_Test\Power_Chip_Test\Source Files\main.c</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\BLUE</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\COMP_CB</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\COMP_Relay</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cy_boot</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\GREEN</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\HF_CB</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\HF_Relay</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_SCB_IRQ</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_SCBCLK</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_scl</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\I2C_1_sda</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\LF_CB</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\LF_Relay</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\MyUART_1</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\RED</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\VR_EN</v>
-<v>Power_Chip_Test\Power_Chip_Test\Generated_Source\PSoC4\cycodeshareexport.ld</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -156,30 +132,6 @@
 <v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_CB_PM.lst</v>
 <v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay.lst</v>
 <v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\COMP_Relay_PM.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\GREEN_PM.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_CB_PM.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\HF_Relay_PM.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_BOOT.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_INT.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_MASTER.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCB_IRQ.lst</v>
-<v>Power_Chip_Test\Power_Chip_Test\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCBCLK.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -222,6 +174,13 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs />
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1440, 521" SelectedTabbedMdiWindow="301bdc2d-b15e-4436-a187-08a9815375e8"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="301bdc2d-b15e-4436-a187-08a9815375e8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
